@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
+title: 弱笔流年
+subtitle: 烂的代码，有时候只是被人误解
+# description: 烂的代码，有时候只是被人误解
 keywords:
 author: Jason Huang
-language: en
+language: zh-CN
 timezone:
 
 # URL
@@ -73,9 +73,29 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hexo-theme-next-master
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+live2d:
+  enable: true
+  scriptFrom: local
+  model:
+    scale: 1
+    hHeadPos: 0.5
+    vHeadPos: 0.618
+  display:
+    superSample: 2
+    width: 150
+    height: 300
+    position: right
+    hOffset: 0
+    vOffset: -20
+  mobile:
+    show: false
+  react:
+    opacityDefault: 0.5
+    opacityOnHover: 0.
