@@ -1,5 +1,6 @@
 .back-to-top {
   background: $b2t-bg-color;
+  left: 30px;
   bottom: $b2t-position-bottom;
   box-sizing: border-box;
   color: $b2t-color;
@@ -8,19 +9,42 @@
   opacity: $b2t-opacity;
   padding: 0 6px;
   position: fixed;
-  right: $b2t-position-right;
+  // right: $b2t-position-right;
   text-align: center;
   transition-property: bottom;
   width: hexo-config('back2top.scrollpercent') ? initial : 24px;
   z-index: $zindex-5;
   the-transition();
-
-  &:hover {
-    color: $sidebar-highlight;
+  // add
+  @media screen and (min-width: 767px) {
+    right: 6px;
+    left: auto;
+    width: 150px;
+    height: 195px;
+    display: inline-block;
+    background: url(/images/gotop.png) no-repeat;
+    outline: none;
+    &:hover {
+      width: 150px;
+      height: 195px;
+      background: url(/images/gotop.gif) no-repeat;
+      outline: none;
+      color: $sidebar-highlight;
+    }
   }
+  
 
   &.back-to-top-on {
-    bottom: $b2t-position-bottom-on;
+    // bottom: $b2t-position-bottom-on;
+    // bottom: 40%;
+    @media screen and (max-width: 479px) {
+      left: 30px;
+      bottom: 19px;
+    }
+    @media screen and (min-width: 479px) {
+      right: 6px;
+      bottom: 40%;
+    }
   }
 
   +tablet-mobile() {

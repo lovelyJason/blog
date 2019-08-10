@@ -4,30 +4,12 @@ if (hexo-config('sidebar.position') == 'left') {
     right: auto;
   }
 
-  .sidebar-toggle, .back-to-top {
+  .sidebar-toggle {
     left: $b2t-position-right;
     right: auto;
 
     +tablet-mobile() {
       left: $b2t-position-right-mobile;
-    }
-  }
-  .back-to-top {
-    @media screen and (min-width: 768px) {
-    right: 6px;
-    left: auto;
-    bottom: 40%;
-    width: 150px;
-    height: 195px;
-    display: inline-block;
-    background: url(/images/gotop.png) no-repeat;
-    outline: none; 
-    &:hover {
-      width: 150px;
-      height: 195px;
-      background: url(/images/gotop.gif) no-repeat;
-      outline: none;
-    }
     }
   }
 }
