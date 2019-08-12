@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="1.1 生成脚手架1npm i express-generator -g  1.2 express脚手架新建项目1express --view=ejs expressMock  1.3 下载依赖项12cd ...npm i  现在一套完整的基于node的服务端已经搭建好了,接下来可以拦截请求了. 2. 更改ngnix配置借助ngnix来实现url的重写 12345678910111213locat">
+  <meta name="description" content="写在前面在用react开发项目时,碰到个问题,记录一下自己的学习过程 通常我们模拟接口会用到mockjs,也熟悉了那一套语法,但是用在react开发的项目中,发现mock没起到拦截作用,后来才发现是由于项目中用到了后端的一些东西,大概是被后端那一层给拦截了,因此会有两个端口,mock的使用会有问题. 想到用node启动一个服务器配合ngnix去拦截请求 1.1 生成脚手架1npm i expres">
 <meta name="keywords" content="nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="express-generator脚手架使用">
 <meta property="og:url" content="http://yoursite.com/2019/08/12/express-generator/index.html">
 <meta property="og:site_name" content="弱笔流年">
-<meta property="og:description" content="1.1 生成脚手架1npm i express-generator -g  1.2 express脚手架新建项目1express --view=ejs expressMock  1.3 下载依赖项12cd ...npm i  现在一套完整的基于node的服务端已经搭建好了,接下来可以拦截请求了. 2. 更改ngnix配置借助ngnix来实现url的重写 12345678910111213locat">
+<meta property="og:description" content="写在前面在用react开发项目时,碰到个问题,记录一下自己的学习过程 通常我们模拟接口会用到mockjs,也熟悉了那一套语法,但是用在react开发的项目中,发现mock没起到拦截作用,后来才发现是由于项目中用到了后端的一些东西,大概是被后端那一层给拦截了,因此会有两个端口,mock的使用会有问题. 想到用node启动一个服务器配合ngnix去拦截请求 1.1 生成脚手架1npm i expres">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T10:49:17.216Z">
+<meta property="og:updated_time" content="2019-08-12T10:55:18.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="express-generator脚手架使用">
-<meta name="twitter:description" content="1.1 生成脚手架1npm i express-generator -g  1.2 express脚手架新建项目1express --view=ejs expressMock  1.3 下载依赖项12cd ...npm i  现在一套完整的基于node的服务端已经搭建好了,接下来可以拦截请求了. 2. 更改ngnix配置借助ngnix来实现url的重写 12345678910111213locat">
+<meta name="twitter:description" content="写在前面在用react开发项目时,碰到个问题,记录一下自己的学习过程 通常我们模拟接口会用到mockjs,也熟悉了那一套语法,但是用在react开发的项目中,发现mock没起到拦截作用,后来才发现是由于项目中用到了后端的一些东西,大概是被后端那一层给拦截了,因此会有两个端口,mock的使用会有问题. 想到用node启动一个服务器配合ngnix去拦截请求 1.1 生成脚手架1npm i expres">
   <link rel="canonical" href="http://yoursite.com/2019/08/12/express-generator/">
 
 
@@ -262,7 +262,7 @@
                 
               
 
-              <time title="创建时间：2019-08-12 18:29:13 / 修改时间：18:49:17" itemprop="dateCreated datePublished" datetime="2019-08-12T18:29:13+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 18:29:13 / 修改时间：18:55:18" itemprop="dateCreated datePublished" datetime="2019-08-12T18:29:13+08:00">2019-08-12</time>
             </span>
           
             
@@ -281,7 +281,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-1-生成脚手架"><a href="#1-1-生成脚手架" class="headerlink" title="1.1 生成脚手架"></a>1.1 生成脚手架</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express-generator -g</span><br></pre></td></tr></table></figure>
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>在用react开发项目时,碰到个问题,记录一下自己的学习过程</p>
+<p>通常我们模拟接口会用到mockjs,也熟悉了那一套语法,但是用在react开发的项目中,发现mock没起到拦截作用,后来才发现是由于项目中用到了后端的一些东西,大概是被后端那一层给拦截了,因此会有两个端口,mock的使用会有问题.</p>
+<p>想到用node启动一个服务器配合ngnix去拦截请求</p>
+<h2 id="1-1-生成脚手架"><a href="#1-1-生成脚手架" class="headerlink" title="1.1 生成脚手架"></a>1.1 生成脚手架</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express-generator -g</span><br></pre></td></tr></table></figure>
 
 <h2 id="1-2-express脚手架新建项目"><a href="#1-2-express脚手架新建项目" class="headerlink" title="1.2 express脚手架新建项目"></a>1.2 express脚手架新建项目</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">express --view=ejs expressMock</span><br></pre></td></tr></table></figure>
 
@@ -484,7 +487,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-生成脚手架"><span class="nav-number">1.</span> <span class="nav-text">1.1 生成脚手架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-express脚手架新建项目"><span class="nav-number">2.</span> <span class="nav-text">1.2 express脚手架新建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-下载依赖项"><span class="nav-number">3.</span> <span class="nav-text">1.3 下载依赖项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-更改ngnix配置"><span class="nav-number">4.</span> <span class="nav-text">2. 更改ngnix配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-生成脚手架"><span class="nav-number">2.</span> <span class="nav-text">1.1 生成脚手架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-express脚手架新建项目"><span class="nav-number">3.</span> <span class="nav-text">1.2 express脚手架新建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-下载依赖项"><span class="nav-number">4.</span> <span class="nav-text">1.3 下载依赖项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-更改ngnix配置"><span class="nav-number">5.</span> <span class="nav-text">2. 更改ngnix配置</span></a></li></ol></div>
             
 
           </div>
