@@ -1703,9 +1703,15 @@ img:hover {
   margin: 5px 0 0;
   text-align: center;
 }
+@font-face {
+  font-family: chocoleta; /*自定义的字体名*/
+  src: url("../font/chocoleta.otf");
+/*引入字体包*/
+}
 .site-description {
-  color: #999;
-  font-size: 1em;
+  color: rgba(245,232,5,0.722);
+  font-family: chocoleta;
+  font-size: 18px;
   margin-top: 5px;
   text-align: center;
 }
@@ -1748,14 +1754,14 @@ img:hover {
 .links-of-author span.exturl {
   border-bottom-color: #555;
   display: inline-block;
-  font-size: 0.8125em;
+  font-size: 1em;
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2fb63e;
+  background: #fa14d6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
