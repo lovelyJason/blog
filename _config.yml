@@ -5,8 +5,8 @@
 # Site
 title: 弱笔流年
 subtitle: 烂的代码，有时候只是被人误解
-# description: 烂的代码，有时候只是被人误解
-keywords:
+description: It is better to be clear than to be clever
+keywords: 前端开发博客,Jason Huang,前端技术分析,实际开发项目总结
 author: Jason Huang
 language: zh-CN
 timezone:
@@ -78,7 +78,10 @@ theme: hexo-theme-next-master
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/lovelyJason/blog.git
+  branch: run-page
+
 
 live2d:
   enable: true

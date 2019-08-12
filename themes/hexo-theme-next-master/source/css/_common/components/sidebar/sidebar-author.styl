@@ -69,10 +69,16 @@ if (hexo-config('avatar.rotated')) {
   margin: $site-author-name-margin;
   text-align: $site-author-name-align;
 }
-
+@font-face{
+	font-family: chocoleta;     /*自定义的字体名*/
+	src:url('../font/chocoleta.otf');   /*引入字体包*/
+}
 .site-description {
-  color: $site-description-color;
-  font-size: $site-description-font-size;
+  // color: $site-description-color;
+  color: #f5e805b8;
+  font-family: chocoleta;
+  // font-size: $site-description-font-size;
+  font-size: 18px;
   margin-top: $site-description-margin-top;
   text-align: $site-description-align;
 }
