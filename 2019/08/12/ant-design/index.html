@@ -328,8 +328,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/12/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/08/12/git/" rel="next" title="git常用命令">
+                  <i class="fa fa-chevron-left"></i> git常用命令
                 </a>
               
             </div>
@@ -569,9 +569,11 @@
 <script>
 console.log(document.location.href)
 if(document.location.href.match(/[a-zA-z]+\.com\/[a-zA-z]+/)) {
-  console.log('非根路径')
+  console.log('根路径')
   // $("#sideBar").hide();
   // $("#header").hide();
+}else {
+  console.log('非根路径')
 }
 </script>
 </html>

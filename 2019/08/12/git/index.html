@@ -1017,8 +1017,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/10/mysql/" rel="next" title="mysql基础命令">
-                  <i class="fa fa-chevron-left"></i> mysql基础命令
+                <a href="/2019/08/12/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
                 </a>
               
             </div>
@@ -1027,8 +1027,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/12/hello-world/" rel="prev" title="Hello World">
-                  Hello World <i class="fa fa-chevron-right"></i>
+                <a href="/2019/08/12/ant-design/" rel="prev" title="ant-design使用记录">
+                  ant-design使用记录 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -1284,9 +1284,11 @@
 <script>
 console.log(document.location.href)
 if(document.location.href.match(/[a-zA-z]+\.com\/[a-zA-z]+/)) {
-  console.log('非根路径')
+  console.log('根路径')
   // $("#sideBar").hide();
   // $("#header").hide();
+}else {
+  console.log('非根路径')
 }
 </script>
 </html>
