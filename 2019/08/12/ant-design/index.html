@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="It is better to be clear than to be clever">
-<meta name="keywords" content="UI组件库">
+  <meta name="description" content="写在前面首次用react+design开发公司的项目,记录一些开发的历程,大佬勿喷 1. 表单组件 经过getFieldDecorator包装的Input组件defaultValue无效,需设置options.initialValue  报错信息 You cannot set a form field before rendering a field associated with the val">
+<meta name="keywords" content="and-design,react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ant-design使用记录">
+<meta property="og:title" content="react+ant-design入坑">
 <meta property="og:url" content="http://yoursite.com/2019/08/12/ant-design/index.html">
 <meta property="og:site_name" content="弱笔流年">
-<meta property="og:description" content="It is better to be clear than to be clever">
+<meta property="og:description" content="写在前面首次用react+design开发公司的项目,记录一些开发的历程,大佬勿喷 1. 表单组件 经过getFieldDecorator包装的Input组件defaultValue无效,需设置options.initialValue  报错信息 You cannot set a form field before rendering a field associated with the val">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T06:52:36.843Z">
+<meta property="og:updated_time" content="2019-08-13T09:56:50.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ant-design使用记录">
-<meta name="twitter:description" content="It is better to be clear than to be clever">
+<meta name="twitter:title" content="react+ant-design入坑">
+<meta name="twitter:description" content="写在前面首次用react+design开发公司的项目,记录一些开发的历程,大佬勿喷 1. 表单组件 经过getFieldDecorator包装的Input组件defaultValue无效,需设置options.initialValue  报错信息 You cannot set a form field before rendering a field associated with the val">
   <link rel="canonical" href="http://yoursite.com/2019/08/12/ant-design/">
 
 
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>ant-design使用记录 | 弱笔流年</title>
+  <title>react+ant-design入坑 | 弱笔流年</title>
   
 
 
@@ -245,7 +245,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">ant-design使用记录
+          <h1 class="post-title" itemprop="name headline">react+ant-design入坑
 
             
           </h1>
@@ -262,11 +262,19 @@
                 
               
 
-              <time title="创建时间：2019-08-12 14:41:24 / 修改时间：14:52:36" itemprop="dateCreated datePublished" datetime="2019-08-12T14:41:24+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 14:41:24" itemprop="dateCreated datePublished" datetime="2019-08-12T14:41:24+08:00">2019-08-12</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-13 17:56:50" itemprop="dateModified" datetime="2019-08-13T17:56:50+08:00">2019-08-13</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -294,7 +302,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>首次用react+design开发公司的项目,记录一些开发的历程,大佬勿喷</p>
+<h2 id="1-表单组件"><a href="#1-表单组件" class="headerlink" title="1. 表单组件"></a>1. 表单组件</h2><ol>
+<li>经过getFieldDecorator包装的Input组件defaultValue无效,需设置options.initialValue</li>
+</ol>
+<h2 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h2><blockquote>
+<p>You cannot set a form field before rendering a field associated with the value</p>
+<p>你不能在页面未渲染之前就进行form表单的相关信息的设置</p>
+</blockquote>
+<p>原因:</p>
+<p>有的属性没有在getFieldDecorator中注册就调用<code>setFieldsValue</code>导致的</p>
+<p>解决方案:</p>
+<p>不要在 componentDidMount 中调用 setFieldsValue 来赋初始值。初始值应该用 initialValue（非受控）或者 mapPropsToFields （受控）来做。</p>
+<p>有在网上看到过用定时器去解决的,但其实这次没效果</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.props.form.setFieldsValue(&#123;</span><br><span class="line">        <span class="string">'userName'</span>:value.name</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>后来检查代码发现,我回填到表单域中的数据是只有三个字段,而我传的参数含有四个字段</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 回填数据</span></span><br><span class="line">backFill(data) &#123;</span><br><span class="line">    <span class="comment">// this.props.form.setFieldsValue(data)</span></span><br><span class="line">    <span class="keyword">this</span>.props.form.setFieldsValue(&#123;</span><br><span class="line">        name: data.name,</span><br><span class="line">        code: data.code,</span><br><span class="line">        phone: data.phone</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为data的数据多了一个字段id,而form.setFieldsValue传来的数据这个方法只能适用于field存在的前提下</p>
+<p>可以参考这篇文章</p>
+<p><a href="https://zhuanlan.zhihu.com/p/67937366" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/67937366</a></p>
+
     </div>
 
     
@@ -318,7 +347,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/UI组件库/" rel="tag"># UI组件库</a>
+              <a href="/tags/and-design/" rel="tag"># and-design</a>
+            
+              <a href="/tags/react/" rel="tag"># react</a>
             
           </div>
         
@@ -328,8 +359,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/12/git/" rel="next" title="git常用命令">
-                  <i class="fa fa-chevron-left"></i> git常用命令
+                <a href="/2019/08/12/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
                 </a>
               
             </div>
@@ -372,8 +403,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -430,7 +470,9 @@
         
           
         
-        <span class="site-state-item-count">4</span>
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -465,6 +507,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-表单组件"><span class="nav-number">2.</span> <span class="nav-text">1. 表单组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错信息"><span class="nav-number">3.</span> <span class="nav-text">报错信息</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -567,13 +626,13 @@
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacityDefault":0.5,"opacityOnHover":0},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 <script>
-console.log(document.location.href)
-if(document.location.href.match(/[a-zA-z]+\.com\/[a-zA-z]+/)) {
-  // console.log('根路径')
-  // $("#header").hide();
-}else {
-  // console.log('非根路径')
-  $("#sideBar").hide();
+// console.log(document.location.href)
+// if(document.location.href.match(/[a-zA-z]+\.com\/[a-zA-z]+/)) {
+//   // console.log('根路径')
+//   // $("#header").hide();
+// }else {
+//   // console.log('非根路径')
+//   $("#sideBar").hide();
 }
 </script>
 </html>
