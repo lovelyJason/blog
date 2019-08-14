@@ -1,5 +1,5 @@
 ---
-title: mysql
+title: mysql基础命令
 date: 2019-08-10 13:54:21
 tags:
 ---

@@ -105,4 +105,14 @@
     {% include '_partials/pjax.swig' %}
   {%- endif %}
 </body>
+<script>
+// console.log(document.location.href)
+// if(document.location.href.match(/[a-zA-z]+\.com\/[a-zA-z]+/)) {
+//   // console.log('根路径')
+//   // $("#header").hide();
+// }else {
+//   // console.log('非根路径')
+//   $("#sideBar").hide();
+}
+</script>
 </html>

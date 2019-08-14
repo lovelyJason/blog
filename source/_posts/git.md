@@ -1,12 +1,12 @@
 ---
-title: git
+title: git常用命令
 categories: 技术
 tags: [编程,感悟]
 ---
 
 
 
-# 1. git
+
 
 ## 1.1. 学习目标
 
