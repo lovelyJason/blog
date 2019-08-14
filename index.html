@@ -229,6 +229,100 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/如何优雅的在ui组件库中覆盖样式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Huang">
+      <meta itemprop="description" content="It is better to be clear than to be clever">
+      <meta itemprop="image" content="http://www.agri35.com/UploadFiles/img_2_1346580284_1668081948_27.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="弱笔流年">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/14/如何优雅的在ui组件库中覆盖样式/" class="post-title-link" itemprop="url">如何优雅的在ui组件库中覆盖样式</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-14 20:15:29 / 修改时间：20:18:01" itemprop="dateCreated datePublished" datetime="2019-08-14T20:15:29+08:00">2019-08-14</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>
+              
+我们正常写的所有样式，都会被加上[data-v-23d425f8]这个属性（如1所示），但是第三方组件内部的标签并没有编译为附带[data-v-23d425f8]这个属性。(所以根据组件内部的class去修改组件样式是不生效的)所以，我们想修改组件的样式，就没辙了。怎么办呢，有些小伙伴给第三方组件
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/14/如何优雅的在ui组件库中覆盖样式/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/react中高阶组件HOC的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -983,7 +1077,7 @@ Orcale
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1160,13 +1254,13 @@ Orcale
   
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacityDefault":0.5,"opacityOnHover":0},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 <script>
-// console.log(document.location.href)
-// if(document.location.href.match(/[a-zA-z]+\.com\/[a-zA-z]+/)) {
-//   // console.log('根路径')
-//   // $("#header").hide();
-// }else {
-//   // console.log('非根路径')
-//   $("#sideBar").hide();
-
+  if(window.location.pathname === '/') {
+    // console.log('根路径')
+  } else {
+    // console.log('非根路径')
+    // 干掉侧边栏
+    $("#sidebar").remove();
+    $(".sidebar-toggle").remove();
+  }
 </script>
 </html>

@@ -55,19 +55,21 @@
   };
 </script>
 
-  <meta name="description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了. 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数">
+  <meta name="description" content="我们正常写的所有样式，都会被加上[data-v-23d425f8]这个属性（如1所示），但是第三方组件内部的标签并没有编译为附带[data-v-23d425f8]这个属性。(所以根据组件内部的class去修改组件样式是不生效的)所以，我们想修改组件的样式，就没辙了。怎么办呢，有些小伙伴给第三方组件写个class，然后在一个公共的css文件中或者在当前页面再写一个没有socped属性的style标">
 <meta name="keywords" content="前端开发博客,Jason Huang,前端技术分析,实际开发项目总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mixin使用入坑">
-<meta property="og:url" content="http://yoursite.com/2019/08/14/mixin使用入坑/index.html">
+<meta property="og:title" content="如何优雅的在ui组件库中覆盖样式">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/如何优雅的在ui组件库中覆盖样式/index.html">
 <meta property="og:site_name" content="弱笔流年">
-<meta property="og:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了. 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数">
+<meta property="og:description" content="我们正常写的所有样式，都会被加上[data-v-23d425f8]这个属性（如1所示），但是第三方组件内部的标签并没有编译为附带[data-v-23d425f8]这个属性。(所以根据组件内部的class去修改组件样式是不生效的)所以，我们想修改组件的样式，就没辙了。怎么办呢，有些小伙伴给第三方组件写个class，然后在一个公共的css文件中或者在当前页面再写一个没有socped属性的style标">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T03:38:40.040Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/14/如何优雅的在ui组件库中覆盖样式/image-20190814201559535.png">
+<meta property="og:updated_time" content="2019-08-14T12:18:01.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mixin使用入坑">
-<meta name="twitter:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了. 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数">
-  <link rel="canonical" href="http://yoursite.com/2019/08/14/mixin使用入坑/">
+<meta name="twitter:title" content="如何优雅的在ui组件库中覆盖样式">
+<meta name="twitter:description" content="我们正常写的所有样式，都会被加上[data-v-23d425f8]这个属性（如1所示），但是第三方组件内部的标签并没有编译为附带[data-v-23d425f8]这个属性。(所以根据组件内部的class去修改组件样式是不生效的)所以，我们想修改组件的样式，就没辙了。怎么办呢，有些小伙伴给第三方组件写个class，然后在一个公共的css文件中或者在当前页面再写一个没有socped属性的style标">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/14/如何优雅的在ui组件库中覆盖样式/image-20190814201559535.png">
+  <link rel="canonical" href="http://yoursite.com/2019/08/14/如何优雅的在ui组件库中覆盖样式/">
 
 
 <script id="page-configurations">
@@ -81,7 +83,7 @@
   };
 </script>
 
-  <title>mixin使用入坑 | 弱笔流年</title>
+  <title>如何优雅的在ui组件库中覆盖样式 | 弱笔流年</title>
   
 
 
@@ -231,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/mixin使用入坑/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/如何优雅的在ui组件库中覆盖样式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jason Huang">
@@ -245,7 +247,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">mixin使用入坑
+          <h1 class="post-title" itemprop="name headline">如何优雅的在ui组件库中覆盖样式
 
             
           </h1>
@@ -262,7 +264,7 @@
                 
               
 
-              <time title="创建时间：2019-08-14 10:42:39 / 修改时间：11:38:40" itemprop="dateCreated datePublished" datetime="2019-08-14T10:42:39+08:00">2019-08-14</time>
+              <time title="创建时间：2019-08-14 20:15:29 / 修改时间：20:18:01" itemprop="dateCreated datePublished" datetime="2019-08-14T20:15:29+08:00">2019-08-14</time>
             </span>
           
             
@@ -281,16 +283,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-什么是mixin"><a href="#1-什么是mixin" class="headerlink" title="1. 什么是mixin"></a>1. 什么是mixin</h2><p>mixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了.</p>
-<p>若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，<strong>混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。</strong></p>
-<p>另外，<strong>组件内不允许有和混合对象相同命名的方法（非生命钩子函数）</strong></p>
-<p>mixin使用参考</p>
-<p><a href="https://segmentfault.com/a/1190000003016446" target="_blank" rel="noopener">https://segmentfault.com/a/1190000003016446</a></p>
-<h2 id="2-注意"><a href="#2-注意" class="headerlink" title="2.注意"></a>2.注意</h2><p>Mixin 只适用于 ES5。也即是说,react中,使用class关键字创建的组件,是无法使用混入功能的,如果你的项目里面用的是 ES6 ，可以采用<a href="https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775" target="_blank" rel="noopener">高阶组件 HOC</a>.我们现在很少使用createClass创建组件了,加上mixin其他的一些缺陷,正因为这个原因,react已经抛弃mixin,这种方法不被推荐使用.</p>
-<p>HOC可以参考以下文章</p>
-<p><a href="https://segmentfault.com/a/1190000018612397?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018612397?utm_source=tag-newest</a></p>
-<p><a href="https://www.jianshu.com/p/43f9a0b601ff" target="_blank" rel="noopener">https://www.jianshu.com/p/43f9a0b601ff</a></p>
-<h2 id="待更新…"><a href="#待更新…" class="headerlink" title="待更新…"></a>待更新…</h2>
+        <p><img src="./image-20190814201559535.png" alt="image-20190814201559535"></p>
+<p>我们正常写的所有样式，都会被加上[data-v-23d425f8]这个属性（如1所示），但是第三方组件内部的标签并没有编译为附带[data-v-23d425f8]这个属性。(所以根据组件内部的class去修改组件样式是不生效的)所以，我们想修改组件的样式，就没辙了。怎么办呢，有些小伙伴给第三方组件写个class，然后在一个公共的css文件中或者在当前页面再写一个没有socped属性的style标签，然后直接在里面修改第三方组件的样式。这样不失为一个方法，但是存在全局污染和命名冲突的问题。约定特定的命名方式，可以避免命名冲突。</p>
+<p>通过深度选择器解决。例如修改上图中组件里的van-ellipsis类的样式，可以这样做：</p>
+<p>.van-tabs /deep/ .van-ellipsis { color: blue};</p>
+<p>这样就不会给van-ellipsis也添加[data-v-23d425f8]属性了。至此可以愉快的修改第三方组件的样式了。</p>
+<h2 id="方案一-css"><a href="#方案一-css" class="headerlink" title="方案一: css"></a>方案一: css</h2><style scoped>
+
+​    .a >>> .b { /* ... */ }
+
+</style>
+
+<p>===========&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
+<p>编译为</p>
+<p>.a[data-v-f3f3eg9] .b { /* … */ }</p>
+<h2 id="方案二-less———deep"><a href="#方案二-less———deep" class="headerlink" title="方案二: less———deep"></a>方案二: less———deep</h2><style lang="less" scoped>
+
+.a {
+
+/deep/ .b{
+
+​    width: 50px;
+
+}
+
+</style>
     </div>
 
     
@@ -315,8 +332,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/12/express-generator/" rel="next" title="快速搭建node服务端">
-                  <i class="fa fa-chevron-left"></i> 快速搭建node服务端
+                <a href="/2019/08/14/react中高阶组件HOC的使用/" rel="next" title="react中高阶组件HOC的使用">
+                  <i class="fa fa-chevron-left"></i> react中高阶组件HOC的使用
                 </a>
               
             </div>
@@ -324,10 +341,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/08/14/react中高阶组件HOC的使用/" rel="prev" title="react中高阶组件HOC的使用">
-                  react中高阶组件HOC的使用 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -473,7 +486,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是mixin"><span class="nav-number">1.</span> <span class="nav-text">1. 什么是mixin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-注意"><span class="nav-number">2.</span> <span class="nav-text">2.注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待更新…"><span class="nav-number">3.</span> <span class="nav-text">待更新…</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方案一-css"><span class="nav-number">1.</span> <span class="nav-text">方案一: css</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案二-less———deep"><span class="nav-number">2.</span> <span class="nav-text">方案二: less———deep</span></a></li></ol></div>
             
 
           </div>
