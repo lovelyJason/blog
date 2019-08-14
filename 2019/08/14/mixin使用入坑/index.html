@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。 另外，组件内不允许有和混合对象相同命名的方法（非生命钩子函数） 2.注意Mixin 只适用于 ES5。也即是说,re">
+  <meta name="description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了. 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数">
 <meta name="keywords" content="前端开发博客,Jason Huang,前端技术分析,实际开发项目总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mixin使用入坑">
 <meta property="og:url" content="http://yoursite.com/2019/08/14/mixin使用入坑/index.html">
 <meta property="og:site_name" content="弱笔流年">
-<meta property="og:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。 另外，组件内不允许有和混合对象相同命名的方法（非生命钩子函数） 2.注意Mixin 只适用于 ES5。也即是说,re">
+<meta property="og:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了. 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T02:55:54.678Z">
+<meta property="og:updated_time" content="2019-08-14T03:38:40.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mixin使用入坑">
-<meta name="twitter:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。 另外，组件内不允许有和混合对象相同命名的方法（非生命钩子函数） 2.注意Mixin 只适用于 ES5。也即是说,re">
+<meta name="twitter:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了. 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数">
   <link rel="canonical" href="http://yoursite.com/2019/08/14/mixin使用入坑/">
 
 
@@ -262,7 +262,7 @@
                 
               
 
-              <time title="创建时间：2019-08-14 10:42:39 / 修改时间：10:55:54" itemprop="dateCreated datePublished" datetime="2019-08-14T10:42:39+08:00">2019-08-14</time>
+              <time title="创建时间：2019-08-14 10:42:39 / 修改时间：11:38:40" itemprop="dateCreated datePublished" datetime="2019-08-14T10:42:39+08:00">2019-08-14</time>
             </span>
           
             
@@ -281,9 +281,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-什么是mixin"><a href="#1-什么是mixin" class="headerlink" title="1. 什么是mixin"></a>1. 什么是mixin</h2><p>mixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象</p>
+        <h2 id="1-什么是mixin"><a href="#1-什么是mixin" class="headerlink" title="1. 什么是mixin"></a>1. 什么是mixin</h2><p>mixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了.</p>
 <p>若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，<strong>混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。</strong></p>
 <p>另外，<strong>组件内不允许有和混合对象相同命名的方法（非生命钩子函数）</strong></p>
+<p>mixin使用参考</p>
+<p><a href="https://segmentfault.com/a/1190000003016446" target="_blank" rel="noopener">https://segmentfault.com/a/1190000003016446</a></p>
 <h2 id="2-注意"><a href="#2-注意" class="headerlink" title="2.注意"></a>2.注意</h2><p>Mixin 只适用于 ES5。也即是说,react中,使用class关键字创建的组件,是无法使用混入功能的,如果你的项目里面用的是 ES6 ，可以采用<a href="https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775" target="_blank" rel="noopener">高阶组件 HOC</a>.我们现在很少使用createClass创建组件了,加上mixin其他的一些缺陷,正因为这个原因,react已经抛弃mixin,这种方法不被推荐使用.</p>
 <p>HOC可以参考以下文章</p>
 <p><a href="https://segmentfault.com/a/1190000018612397?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018612397?utm_source=tag-newest</a></p>
@@ -322,6 +324,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/14/react中高阶组件HOC的使用/" rel="prev" title="react中高阶组件HOC的使用">
+                  react中高阶组件HOC的使用 <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -378,7 +384,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
