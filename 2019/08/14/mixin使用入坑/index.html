@@ -55,18 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="It is better to be clear than to be clever">
+  <meta name="description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。 另外，组件内不允许有和混合对象相同命名的方法（非生命钩子函数） 2.注意Mixin 只适用于 ES5。也即是说,re">
 <meta name="keywords" content="前端开发博客,Jason Huang,前端技术分析,实际开发项目总结">
-<meta property="og:type" content="website">
-<meta property="og:title" content="弱笔流年">
-<meta property="og:url" content="http://yoursite.com/tags/and-design/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mixin使用入坑">
+<meta property="og:url" content="http://yoursite.com/2019/08/14/mixin使用入坑/index.html">
 <meta property="og:site_name" content="弱笔流年">
-<meta property="og:description" content="It is better to be clear than to be clever">
+<meta property="og:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。 另外，组件内不允许有和混合对象相同命名的方法（非生命钩子函数） 2.注意Mixin 只适用于 ES5。也即是说,re">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-14T02:55:54.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="弱笔流年">
-<meta name="twitter:description" content="It is better to be clear than to be clever">
-  <link rel="canonical" href="http://yoursite.com/tags/and-design/">
+<meta name="twitter:title" content="mixin使用入坑">
+<meta name="twitter:description" content="1. 什么是mixinmixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象 若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。 另外，组件内不允许有和混合对象相同命名的方法（非生命钩子函数） 2.注意Mixin 只适用于 ES5。也即是说,re">
+  <link rel="canonical" href="http://yoursite.com/2019/08/14/mixin使用入坑/">
 
 
 <script id="page-configurations">
@@ -74,13 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>标签: and-design | 弱笔流年</title>
+  <title>mixin使用入坑 | 弱笔流年</title>
   
 
 
@@ -209,27 +210,6 @@
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 </nav>
 </div>
     </header>
@@ -240,69 +220,121 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content ">
+          <div id="content" class="content page-post-detail">
             
 
-  
-  
-  
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>and-design<small>标签</small>
-        </h1>
-      </div>
-
-      
-
-  
-  
-  
-
-  
+  <div id="posts" class="posts-expand">
     
-    <div class="collection-title">
-      <h1 class="archive-year" id="archive-year-2019">2019</h1>
-    </div>
-  
-  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/mixin使用入坑/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Huang">
+      <meta itemprop="description" content="It is better to be clear than to be clever">
+      <meta itemprop="image" content="http://www.agri35.com/UploadFiles/img_2_1346580284_1668081948_27.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="弱笔流年">
+    </span>
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/08/12/ant-design/" itemprop="url">
+          <h1 class="post-title" itemprop="name headline">mixin使用入坑
+
             
-              <span itemprop="name">react+ant-design入坑</span>
-            
-          </a>
+          </h1>
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-08-12T14:41:24+08:00"
-              content="2019-08-12">
-          08-12
-        </time>
-      </div>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-    </header>
-  </article>
+              
+                
+              
 
+              <time title="创建时间：2019-08-14 10:42:39 / 修改时间：10:55:54" itemprop="dateCreated datePublished" datetime="2019-08-14T10:42:39+08:00">2019-08-14</time>
+            </span>
+          
+            
 
+            
+          
 
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-什么是mixin"><a href="#1-什么是mixin" class="headerlink" title="1. 什么是mixin"></a>1. 什么是mixin</h2><p>mixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象</p>
+<p>若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，<strong>混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。</strong></p>
+<p>另外，<strong>组件内不允许有和混合对象相同命名的方法（非生命钩子函数）</strong></p>
+<h2 id="2-注意"><a href="#2-注意" class="headerlink" title="2.注意"></a>2.注意</h2><p>Mixin 只适用于 ES5。也即是说,react中,使用class关键字创建的组件,是无法使用混入功能的,如果你的项目里面用的是 ES6 ，可以采用<a href="https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775" target="_blank" rel="noopener">高阶组件 HOC</a>.我们现在很少使用createClass创建组件了,加上mixin其他的一些缺陷,正因为这个原因,react已经抛弃mixin,这种方法不被推荐使用.</p>
+<p>HOC可以参考以下文章</p>
+<p><a href="https://segmentfault.com/a/1190000018612397?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018612397?utm_source=tag-newest</a></p>
+<p><a href="https://www.jianshu.com/p/43f9a0b601ff" target="_blank" rel="noopener">https://www.jianshu.com/p/43f9a0b601ff</a></p>
+<h2 id="待更新…"><a href="#待更新…" class="headerlink" title="待更新…"></a>待更新…</h2>
     </div>
 
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/12/express-generator/" rel="next" title="快速搭建node服务端">
+                  <i class="fa fa-chevron-left"></i> 快速搭建node服务端
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -321,8 +353,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -416,6 +457,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是mixin"><span class="nav-number">1.</span> <span class="nav-text">1. 什么是mixin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-注意"><span class="nav-number">2.</span> <span class="nav-text">2.注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待更新…"><span class="nav-number">3.</span> <span class="nav-text">待更新…</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -512,6 +570,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false},"react":{"opacityDefault":0.5,"opacityOnHover":0},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 <script>
 // console.log(document.location.href)
