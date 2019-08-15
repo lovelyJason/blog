@@ -281,16 +281,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-什么是mixin"><a href="#1-什么是mixin" class="headerlink" title="1. 什么是mixin"></a>1. 什么是mixin</h2><p>mixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了.</p>
+        <h2><span id="1-什么是mixin">1. 什么是mixin</span></h2><p>mixins（混合）是指定义一个对象，让组件去继承该对象的方法和状态的过程，该对象也被称为混入（混合）对象,用来解决代码复用的问题,事实上这个已经不被官方推荐使用了.因此本文只是简单介绍一下,毕竟前端的技术日新月异,老的技术就不用再浪费时间过多关注了.</p>
 <p>若组件和被继承的混合对象具有相同的生命钩子函数，并且在执行该生命钩子函数时，<strong>混合对象的函数会优先执行，然后再到组件内相同函数执行，但仅限于生命钩子函数。</strong></p>
 <p>另外，<strong>组件内不允许有和混合对象相同命名的方法（非生命钩子函数）</strong></p>
 <p>mixin使用参考</p>
 <p><a href="https://segmentfault.com/a/1190000003016446" target="_blank" rel="noopener">https://segmentfault.com/a/1190000003016446</a></p>
-<h2 id="2-注意"><a href="#2-注意" class="headerlink" title="2.注意"></a>2.注意</h2><p>Mixin 只适用于 ES5。也即是说,react中,使用class关键字创建的组件,是无法使用混入功能的,如果你的项目里面用的是 ES6 ，可以采用<a href="https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775" target="_blank" rel="noopener">高阶组件 HOC</a>.我们现在很少使用createClass创建组件了,加上mixin其他的一些缺陷,正因为这个原因,react已经抛弃mixin,这种方法不被推荐使用.</p>
+<h2><span id="2注意">2.注意</span></h2><p>Mixin 只适用于 ES5。也即是说,react中,使用class关键字创建的组件,是无法使用混入功能的,如果你的项目里面用的是 ES6 ，可以采用<a href="https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775" target="_blank" rel="noopener">高阶组件 HOC</a>.我们现在很少使用createClass创建组件了,加上mixin其他的一些缺陷,正因为这个原因,react已经抛弃mixin,这种方法不被推荐使用.</p>
 <p>HOC可以参考以下文章</p>
 <p><a href="https://segmentfault.com/a/1190000018612397?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018612397?utm_source=tag-newest</a></p>
 <p><a href="https://www.jianshu.com/p/43f9a0b601ff" target="_blank" rel="noopener">https://www.jianshu.com/p/43f9a0b601ff</a></p>
-<h2 id="待更新…"><a href="#待更新…" class="headerlink" title="待更新…"></a>待更新…</h2>
+<h2><span id="待更新">待更新…</span></h2>
     </div>
 
     
@@ -473,7 +473,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是mixin"><span class="nav-number">1.</span> <span class="nav-text">1. 什么是mixin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-注意"><span class="nav-number">2.</span> <span class="nav-text">2.注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待更新…"><span class="nav-number">3.</span> <span class="nav-text">待更新…</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1. 什么是mixin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">2.注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">待更新…</span></a></li></ol></div>
             
 
           </div>
@@ -587,8 +587,8 @@
   } else {
     // console.log('非根路径')
     // 干掉侧边栏
-    $("#sidebar").remove();
-    $(".sidebar-toggle").remove();
+    // $("#sidebar").remove();
+    // $(".sidebar-toggle").remove();
   }
 </script>
 </html>

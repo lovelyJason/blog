@@ -281,19 +281,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>在用react开发项目时,碰到个问题,记录一下自己的学习过程</p>
+        <h2><span id="写在前面">写在前面</span></h2><p>在用react开发项目时,碰到个问题,记录一下自己的学习过程</p>
 <p>通常我们模拟接口会用到mockjs,也熟悉了那一套语法,但是用在react开发的项目中,发现mock没起到拦截作用,后来才发现是由于公司的项目结构是有go的一些东西,大概是被后端那一层给拦截了,因此mock的使用会有问题.</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Api</span><span class="params">()</span></span> &#123;</span><br><span class="line">	app := iris.Party(<span class="string">"/api"</span>)  <span class="comment">// 这边已经被go拦截过了</span></span><br><span class="line"></span><br><span class="line">	user := &amp;api.UserController&#123;&#125;</span><br><span class="line">	httpHandle := &amp;api.HttpHandle&#123;&#125;</span><br><span class="line">	app.Get(<span class="string">"/passport/signout/"</span>, user.SignOut)</span><br><span class="line"></span><br><span class="line">	app.Any(<span class="string">"/v1/*."</span>, httpHandle.HttpTransmit)</span><br><span class="line">	app.Get(<span class="string">"/download/*."</span>, httpHandle.HttpTransmitDownload)</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 上传初始化数据，直连business层</span></span><br><span class="line">	app.Any(<span class="string">"/business/*."</span>, httpHandle.HttpBusinessTransmit)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>想到用node启动一个服务器配合ngnix去拦截请求</p>
-<h2 id="1-1-生成脚手架"><a href="#1-1-生成脚手架" class="headerlink" title="1.1 生成脚手架"></a>1.1 生成脚手架</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express-generator -g</span><br></pre></td></tr></table></figure>
+<h2><span id="11-生成脚手架">1.1 生成脚手架</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express-generator -g</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-2-express脚手架新建项目"><a href="#1-2-express脚手架新建项目" class="headerlink" title="1.2 express脚手架新建项目"></a>1.2 express脚手架新建项目</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">express --view=ejs expressMock</span><br></pre></td></tr></table></figure>
+<h2><span id="12-express脚手架新建项目">1.2 express脚手架新建项目</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">express --view=ejs expressMock</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-3-下载依赖项"><a href="#1-3-下载依赖项" class="headerlink" title="1.3 下载依赖项"></a>1.3 下载依赖项</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ...</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
+<h2><span id="13-下载依赖项">1.3 下载依赖项</span></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ...</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
 <p>现在一套完整的基于node的服务端已经搭建好了,接下来可以拦截请求了.</p>
-<h2 id="2-更改ngnix配置"><a href="#2-更改ngnix配置" class="headerlink" title="2. 更改ngnix配置"></a>2. 更改ngnix配置</h2><p>借助ngnix来实现url的重写</p>
+<h2><span id="2-更改ngnix配置">2. 更改ngnix配置</span></h2><p>借助ngnix来实现url的重写</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">location /api/ &#123;</span><br><span class="line"></span><br><span class="line">       proxy_pass   http://127.0.0.1:1234/;</span><br><span class="line"></span><br><span class="line">       proxy_set_header X-real-ip $remote_addr;</span><br><span class="line"></span><br><span class="line">       proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line"></span><br><span class="line">       proxy_set_header Host $host;</span><br><span class="line"></span><br><span class="line">       client_max_body_size 1000m;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
 <p>别忘了重启ngnix</p>
@@ -495,7 +495,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-生成脚手架"><span class="nav-number">2.</span> <span class="nav-text">1.1 生成脚手架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-express脚手架新建项目"><span class="nav-number">3.</span> <span class="nav-text">1.2 express脚手架新建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-下载依赖项"><span class="nav-number">4.</span> <span class="nav-text">1.3 下载依赖项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-更改ngnix配置"><span class="nav-number">5.</span> <span class="nav-text">2. 更改ngnix配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">1.1 生成脚手架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">1.2 express脚手架新建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">1.3 下载依赖项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">2. 更改ngnix配置</span></a></li></ol></div>
             
 
           </div>
@@ -609,8 +609,8 @@
   } else {
     // console.log('非根路径')
     // 干掉侧边栏
-    $("#sidebar").remove();
-    $(".sidebar-toggle").remove();
+    // $("#sidebar").remove();
+    // $(".sidebar-toggle").remove();
   }
 </script>
 </html>
