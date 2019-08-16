@@ -186,7 +186,6 @@
               #}{{ post.description }}{#
             #}</div>
           {%- endif %}
-
         </div>
       </header>
     {%- endif %}
@@ -232,7 +231,8 @@
                 {{ __('post.read_more') }} &raquo;
               </a>
             </div>
-          {%- endif %}
+          {%- endif %}       
+
           <!--/noindex-->
         {% elif theme.auto_excerpt.enable %}
           {%- set content = post.content | replace('<td class="gutter">.*?</td>', "", "g") | striptags %}

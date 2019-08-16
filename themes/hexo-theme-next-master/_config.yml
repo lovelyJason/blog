@@ -230,13 +230,20 @@ avatar:
 toc:
   enable: true
   # Automatically add list number to toc.
-  number: true
+  number: true   #自动将列表编号添加到toc
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: false     #true时是当标题宽度很长时，自动换到下一行
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false
   # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front-matter.
   max_depth: 6
+  # class: toc      #插件配置hexo-toc
+  # slugify: transliteration
+  # decodeEntities: false
+  # anchor:
+  #   position: after
+  #   symbol: '#'
+  #   style: header-anchor
 
 sidebar:
   # Sidebar Position.

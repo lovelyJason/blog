@@ -106,13 +106,13 @@
   {%- endif %}
 </body>
 <script>
-// console.log(document.location.href)
-// if(document.location.href.match(/[a-zA-z]+\.com\/[a-zA-z]+/)) {
-//   // console.log('根路径')
-//   // $("#header").hide();
-// }else {
-//   // console.log('非根路径')
-//   $("#sideBar").hide();
-}
+  if(window.location.pathname === '/') {
+    // console.log('根路径')
+  } else {
+    // console.log('非根路径')
+    // 干掉侧边栏
+    // $("#sidebar").remove();
+    // $(".sidebar-toggle").remove();
+  }
 </script>
 </html>
