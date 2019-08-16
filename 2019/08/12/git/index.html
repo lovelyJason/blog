@@ -361,7 +361,6 @@
           
 
           
-
         </div>
       </header>
 
@@ -371,7 +370,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2><span id="11-学习目标">1.1. 学习目标</span></h2><ul>
+        <h2 id="1-1-学习目标"><a href="#1-1-学习目标" class="headerlink" title="1.1. 学习目标"></a>1.1. 学习目标</h2><ul>
 <li>理解<ul>
 <li>常用bash系统命令</li>
 <li>git 的概念</li>
@@ -385,34 +384,34 @@
 </li>
 <li>应用</li>
 </ul>
-<h2><span id="12-认识命令行-了解">1.2. 认识命令行 了解</span></h2><h3><span id="121-shell">1.2.1. shell</span></h3><p>​    <strong>Shell</strong> 俗称壳（用来区别于核），是指“提供使用者使用界面”的软件（命令解析器）</p>
+<h2 id="1-2-认识命令行-了解"><a href="#1-2-认识命令行-了解" class="headerlink" title="1.2. 认识命令行 了解"></a>1.2. 认识命令行 了解</h2><h3 id="1-2-1-shell"><a href="#1-2-1-shell" class="headerlink" title="1.2.1. shell"></a>1.2.1. shell</h3><p>​    <strong>Shell</strong> 俗称壳（用来区别于核），是指“提供使用者使用界面”的软件（命令解析器）</p>
 <p>如</p>
 <p><img src="medias/1525664062775.png" alt="1525664062775"></p>
 <p>​    cmd shell 是系统提供的最基本的shell，功能也相对基础。</p>
 <p>​    powser shell 和 git bash shell 可以理解是对 cmd shell 的一层封装，提供了更为强大的命令。</p>
 <p>​    我们平常在系统上所进行的操作，如新增文件，编辑文件，删除文件等。其实底层都是通过一系列的命令来执行的。</p>
-<h3><span id="122-常见bash命令">1.2.2. 常见bash命令</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span> (Print Working Directory) 查看当前目录</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> (Change Directory) 切换目录，如 <span class="built_in">cd</span> /etc</span><br><span class="line"></span><br><span class="line">ls (List) 查看当前目录下内容，如 ls </span><br><span class="line"></span><br><span class="line">mkdir (Make Directory) 创建目录，如 mkdir blog</span><br><span class="line"></span><br><span class="line">touch 创建文件，如 touch index.html</span><br><span class="line"></span><br><span class="line">cat 查看文件全部内容，如 catindex.html</span><br><span class="line"></span><br><span class="line">rm (remove) 删除文件，如 rm index.html、rm -rf  blog</span><br><span class="line"></span><br><span class="line">rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</span><br><span class="line"></span><br><span class="line">mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</span><br><span class="line"></span><br><span class="line">cp (copy) 复制文件，cp index.html ./demo/index.html</span><br><span class="line"></span><br><span class="line">head 查看文件前几行，如 head -5 index.html</span><br><span class="line"></span><br><span class="line"><span class="built_in">history</span> 查看操作历史</span><br><span class="line"></span><br><span class="line">whoami 查看当前用户</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-2-常见bash命令"><a href="#1-2-2-常见bash命令" class="headerlink" title="1.2.2. 常见bash命令"></a>1.2.2. 常见bash命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span> (Print Working Directory) 查看当前目录</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> (Change Directory) 切换目录，如 <span class="built_in">cd</span> /etc</span><br><span class="line"></span><br><span class="line">ls (List) 查看当前目录下内容，如 ls </span><br><span class="line"></span><br><span class="line">mkdir (Make Directory) 创建目录，如 mkdir blog</span><br><span class="line"></span><br><span class="line">touch 创建文件，如 touch index.html</span><br><span class="line"></span><br><span class="line">cat 查看文件全部内容，如 catindex.html</span><br><span class="line"></span><br><span class="line">rm (remove) 删除文件，如 rm index.html、rm -rf  blog</span><br><span class="line"></span><br><span class="line">rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</span><br><span class="line"></span><br><span class="line">mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</span><br><span class="line"></span><br><span class="line">cp (copy) 复制文件，cp index.html ./demo/index.html</span><br><span class="line"></span><br><span class="line">head 查看文件前几行，如 head -5 index.html</span><br><span class="line"></span><br><span class="line"><span class="built_in">history</span> 查看操作历史</span><br><span class="line"></span><br><span class="line">whoami 查看当前用户</span><br></pre></td></tr></table></figure>
 
 <p>【注意】，在命令行当中 使用快捷键 进行复制粘贴都是没有效果的。</p>
 <ul>
 <li>ctrl + p 没有效果</li>
 <li>ctrl + c  强制退出到 命令行当中</li>
 </ul>
-<h3><span id="123-vi编辑器">1.2.3. vi编辑器</span></h3><ul>
+<h3 id="1-2-3-vi编辑器"><a href="#1-2-3-vi编辑器" class="headerlink" title="1.2.3. vi编辑器"></a>1.2.3. vi编辑器</h3><ul>
 <li>vi编辑器是Linux和Unix上最基本的文本编辑器。由于不需要图形界面，vi是效率很高的文本编辑器</li>
 <li>vi编辑器提供了3种模式，分别是命令模式、插入模式、末行模式 每种模式有不同的功能</li>
 </ul>
 <p><img src="medias/1525665671693.png" alt="1525665671693"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">a) 打开/创建文件， vi 文件路径</span><br><span class="line">b) 末行模式 :w保存，:w filenme另存为</span><br><span class="line">c) 末行模式 :q退出</span><br><span class="line">d) 末行模式 :wq保存并退出</span><br><span class="line">e) 末行模式 :e! 撤销更改，返回到上一次保存的状态</span><br><span class="line">f) 末行模式 :q! 不保存强制退出</span><br><span class="line"></span><br><span class="line">================================================================</span><br><span class="line"></span><br><span class="line">h) 命令模式 ZZ（大写）保存并退出</span><br><span class="line">i) 命令模式 u辙销操作，可多次使用</span><br><span class="line">j) 命令模式 dd删除当前行</span><br><span class="line">k) 命令模式 yy复制当前行</span><br><span class="line">l) 命令模式 p 粘贴内容</span><br><span class="line">o) 命令模式 i进入编辑模式，当前光标处插入</span><br><span class="line">p) 命令模式 a进入编辑模式，当前光标后插入</span><br><span class="line">q) 命令模式 A进入编辑模式，光标移动到行尾</span><br><span class="line">r) 命令模式 o进入编辑模式，当前行下面插入新行</span><br><span class="line">s) 命令模式 O进入编辑模式，当前行上面插入新行</span><br></pre></td></tr></table></figure>
 
-<h2><span id="13-git概述">1.3. git概述</span></h2><p>​    <strong>Git</strong>是一款免费、开源的<strong>分布式版本控制系统</strong>，用于敏捷高效地处理任何或小或大的项目。</p>
+<h2 id="1-3-git概述"><a href="#1-3-git概述" class="headerlink" title="1.3. git概述"></a>1.3. git概述</h2><p>​    <strong>Git</strong>是一款免费、开源的<strong>分布式版本控制系统</strong>，用于敏捷高效地处理任何或小或大的项目。</p>
 <p>它可以处理以下需求</p>
 <ul>
 <li>方便的和团队共享文件</li>
 <li>对文件进行版本的控制</li>
 </ul>
 <p><a href="https://baike.baidu.com/item/GIT/12647237" target="_blank" rel="noopener">Git百度百科</a></p>
-<h2><span id="14-git和svn对比">1.4. git和svn对比</span></h2><h3><span id="141-svn">1.4.1. svn</span></h3><p>​    SVN是<strong>集中式版本控制系统</strong>，版本库是集中放在中央服务器的。</p>
+<h2 id="1-4-git和svn对比"><a href="#1-4-git和svn对比" class="headerlink" title="1.4. git和svn对比"></a>1.4. git和svn对比</h2><h3 id="1-4-1-svn"><a href="#1-4-1-svn" class="headerlink" title="1.4.1. svn"></a>1.4.1. svn</h3><p>​    SVN是<strong>集中式版本控制系统</strong>，版本库是集中放在中央服务器的。</p>
 <p>每次需要获取最新的文件或者保存自己当前的记录时，都必须要连接到服务器才可以。</p>
 <p><strong>关键字</strong>：</p>
 <ul>
@@ -420,32 +419,32 @@
 <li>需要连接外网</li>
 </ul>
 <p><img src="medias/1525849453223.png" alt="1525849453223"></p>
-<h3><span id="142-git">1.4.2. git</span></h3><p>​    Git是<strong>分布式版本控制系统</strong>，它没有中央服务器，每个人的电脑就是一个完整的版本库。</p>
+<h3 id="1-4-2-git"><a href="#1-4-2-git" class="headerlink" title="1.4.2. git"></a>1.4.2. git</h3><p>​    Git是<strong>分布式版本控制系统</strong>，它没有中央服务器，每个人的电脑就是一个完整的版本库。</p>
 <p>当需要和别人分享文件时时，再联网即可。</p>
 <p><strong>关键字</strong>:</p>
 <ul>
 <li>分布式</li>
 </ul>
 <p><img src="medias/1525849575573.png" alt="1525849575573"></p>
-<h2><span id="15-git-安装">1.5. git 安装</span></h2><p>​    Git可以在Linux、Unix、Mac和Windows这几大平台上正常运行使用。</p>
+<h2 id="1-5-git-安装"><a href="#1-5-git-安装" class="headerlink" title="1.5. git 安装"></a>1.5. git 安装</h2><p>​    Git可以在Linux、Unix、Mac和Windows这几大平台上正常运行使用。</p>
 <p><a href="https://git-scm.com/download" target="_blank" rel="noopener">下载地址</a></p>
 <p><img src="medias/1525849875115.png" alt="1525849875115"></p>
 <p>​    安装成功后（windows下），在系统的任意目录下 点击 鼠标右键   出现以下菜单，代表安装成功。</p>
 <p><img src="medias/1525849962486.png" alt="1525849962486"></p>
-<h2><span id="16-初次运行-git-前的配置">1.6. 初次运行 Git 前的配置</span></h2><p>​    在团队的项目开发中，当我们对进行文件的修改时，都应该告诉服务器 是<strong>谁</strong>做的修改。所以 需要 配置个人信息。</p>
-<h3><span id="161-全局配置">1.6.1. 全局配置</span></h3><p>​    打开 git 命令行工具   </p>
+<h2 id="1-6-初次运行-Git-前的配置"><a href="#1-6-初次运行-Git-前的配置" class="headerlink" title="1.6. 初次运行 Git 前的配置"></a>1.6. 初次运行 Git 前的配置</h2><p>​    在团队的项目开发中，当我们对进行文件的修改时，都应该告诉服务器 是<strong>谁</strong>做的修改。所以 需要 配置个人信息。</p>
+<h3 id="1-6-1-全局配置"><a href="#1-6-1-全局配置" class="headerlink" title="1.6.1. 全局配置"></a>1.6.1. 全局配置</h3><p>​    打开 git 命令行工具   </p>
 <p><img src="medias/1525850607969.png" alt="1525850607969"></p>
 <p>​    输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置 用户名</span></span><br><span class="line">git config --global  user.name  xxx </span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置 邮箱</span></span><br><span class="line">git config --global  user.email  xxx </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看用户名</span></span><br><span class="line">git config   user.name</span><br></pre></td></tr></table></figure>
 
-<h2><span id="17-git-基础">1.7. git 基础</span></h2><p>​    如 我们想使用 git 对 该目录进行版本控制  </p>
+<h2 id="1-7-git-基础"><a href="#1-7-git-基础" class="headerlink" title="1.7. git 基础"></a>1.7. git 基础</h2><p>​    如 我们想使用 git 对 该目录进行版本控制  </p>
 <p><img src="medias/1525851471188.png" alt="1525851471188"></p>
-<h3><span id="171-创建版本库">1.7.1. 创建版本库</span></h3><p>​    在 <code>我的第一个网站</code> 目录 内   输入 <code>git init</code>  初始化 仓库 </p>
+<h3 id="1-7-1-创建版本库"><a href="#1-7-1-创建版本库" class="headerlink" title="1.7.1. 创建版本库"></a>1.7.1. 创建版本库</h3><p>​    在 <code>我的第一个网站</code> 目录 内   输入 <code>git init</code>  初始化 仓库 </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
 <p>​    可以看到，在该目录下 多了一个 <strong>隐藏文件夹</strong>  <code>.git</code>   该文件夹便是实现存放版本记录的地方。<strong>不要手动修改！</strong></p>
 <p><img src="medias/1525851668248.png" alt="1525851668248"></p>
-<h3><span id="172-添加到暂存区">1.7.2. 添加到暂存区</span></h3><p>​    现在我们的代码 和 git 仓库 还没有直接的联系  查看 git 仓库状态  输入 <code>git status</code></p>
+<h3 id="1-7-2-添加到暂存区"><a href="#1-7-2-添加到暂存区" class="headerlink" title="1.7.2. 添加到暂存区"></a>1.7.2. 添加到暂存区</h3><p>​    现在我们的代码 和 git 仓库 还没有直接的联系  查看 git 仓库状态  输入 <code>git status</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525852100376.png" alt="1525852100376"></p>
@@ -458,26 +457,26 @@
 
 <p><img src="medias/1525852288499.png" alt="1525852288499"></p>
 <p>​    因此，我们可以 随时的  输入  <code>git status</code> 来查看当前仓库的状态，来获得 提示。</p>
-<h3><span id="173-提交本地仓库">1.7.3. 提交本地仓库</span></h3><p>​    暂存区的意思 只是暂时存储文件，当需要把对文件的操作 <strong>永久存储下来时</strong>，需要在把暂存区中的文件提交到到本地仓库。</p>
+<h3 id="1-7-3-提交本地仓库"><a href="#1-7-3-提交本地仓库" class="headerlink" title="1.7.3. 提交本地仓库"></a>1.7.3. 提交本地仓库</h3><p>​    暂存区的意思 只是暂时存储文件，当需要把对文件的操作 <strong>永久存储下来时</strong>，需要在把暂存区中的文件提交到到本地仓库。</p>
 <p>​    输入以下命令进行提交，同时 还需要备注 信息 如 <code>初始化项目</code> 、 <code>新增了购物接口</code> 等。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"初始化项目"</span></span><br></pre></td></tr></table></figure>
 
 <p>​    重新输入 <code>git status</code> 查看git 仓库状态 </p>
 <p><img src="medias/1525853095009.png" alt="1525853095009"></p>
-<h3><span id="174-小结">1.7.4. 小结</span></h3><p>​    把刚才操作的流程，换成专业的术语。</p>
+<h3 id="1-7-4-小结"><a href="#1-7-4-小结" class="headerlink" title="1.7.4. 小结"></a>1.7.4. 小结</h3><p>​    把刚才操作的流程，换成专业的术语。</p>
 <ul>
 <li>工作目录 ：刚才操作的文件夹   <code>我的第一个网站</code> 就称为 <strong>工作目录</strong></li>
 <li>暂存区 ： 是用来存放 对文件进行了 跟踪，但是还没有 提交到 <strong>本地仓库</strong> 的地方</li>
 <li>本地仓库： 最终实现 文件版本管理的地方。</li>
 </ul>
 <p><img src="medias/1525853953043.png" alt="1525853953043"></p>
-<h2><span id="18-修改文件">1.8. 修改文件</span></h2><p>​    在上个操作的基础上，我们对文件进行修改，然后让 git 记录这次修改的操作。</p>
+<h2 id="1-8-修改文件"><a href="#1-8-修改文件" class="headerlink" title="1.8. 修改文件"></a>1.8. 修改文件</h2><p>​    在上个操作的基础上，我们对文件进行修改，然后让 git 记录这次修改的操作。</p>
 <p>编辑 <code>index.html</code> 文件 输入 </p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>完成了登录页面的设计<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>​    此 时 <code>index.html</code> 文件发生了修改  我们输入  <code>git status</code> 查看仓库状态 </p>
 <p><img src="medias/1525854096520.png" alt="1525854096520"></p>
-<h3><span id="181-添加到暂存区">1.8.1. 添加到暂存区</span></h3><p>​    以上的修改，可以理解为 完成了一个功能，此时，也需要将这些代码提交到 <strong>本地仓库</strong> 中进行记录管理。因此，先添加到 <strong>暂存区</strong> 再提交到 <strong>本地仓库</strong> 中即可。</p>
+<h3 id="1-8-1-添加到暂存区"><a href="#1-8-1-添加到暂存区" class="headerlink" title="1.8.1. 添加到暂存区"></a>1.8.1. 添加到暂存区</h3><p>​    以上的修改，可以理解为 完成了一个功能，此时，也需要将这些代码提交到 <strong>本地仓库</strong> 中进行记录管理。因此，先添加到 <strong>暂存区</strong> 再提交到 <strong>本地仓库</strong> 中即可。</p>
 <p>​    将 修改的文件添加到 <strong>暂存区</strong>  输入 </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add *</span><br></pre></td></tr></table></figure>
 
@@ -485,26 +484,26 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525854150926.png" alt="1525854150926"></p>
-<h3><span id="182-提交到本地仓库">1.8.2. 提交到本地仓库</span></h3><p>​    将暂存区中的文件提交的 本地仓库 实现 版本 记录</p>
+<h3 id="1-8-2-提交到本地仓库"><a href="#1-8-2-提交到本地仓库" class="headerlink" title="1.8.2. 提交到本地仓库"></a>1.8.2. 提交到本地仓库</h3><p>​    将暂存区中的文件提交的 本地仓库 实现 版本 记录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"完成了登录功能"</span></span><br></pre></td></tr></table></figure>
 
 <p>​    查看git 仓库状态</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525854664486.png" alt="1525854664486"></p>
-<h2><span id="19-删除文件">1.9. 删除文件</span></h2><p>​    在git 仓库中，有时候删除一些无效的文件。以删除     <code>css/index.css</code> 为例</p>
+<h2 id="1-9-删除文件"><a href="#1-9-删除文件" class="headerlink" title="1.9. 删除文件"></a>1.9. 删除文件</h2><p>​    在git 仓库中，有时候删除一些无效的文件。以删除     <code>css/index.css</code> 为例</p>
 <p>​    手动将该 文件夹整个删除     删除成功 如下 </p>
 <p><img src="medias/1525855125140.png" alt="1525855125140"></p>
 <p>​    查看仓库状态</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525855216992.png" alt="1525855216992"></p>
-<h3><span id="191-添加到暂存区">1.9.1. 添加到暂存区</span></h3><p>​    删除了 文件，也可以了解为是对项目 进行了一次升级改造，因此同样需要把该 操作 提交到 <strong>本地仓库</strong></p>
+<h3 id="1-9-1-添加到暂存区"><a href="#1-9-1-添加到暂存区" class="headerlink" title="1.9.1. 添加到暂存区"></a>1.9.1. 添加到暂存区</h3><p>​    删除了 文件，也可以了解为是对项目 进行了一次升级改造，因此同样需要把该 操作 提交到 <strong>本地仓库</strong></p>
 <p>​    输入    <code>git add ./</code>   请注意 当添加删除操作时  使用 <code>git add *</code> 是无效的。（git add * 不会缓存删除操作）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add ./</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525855744440.png" alt="1525855744440"></p>
-<h3><span id="192-提交到本地仓库">1.9.2. 提交到本地仓库</span></h3><p>​    把该 删除操作 提交到 <strong>本地仓库</strong> 实现 版本记录</p>
+<h3 id="1-9-2-提交到本地仓库"><a href="#1-9-2-提交到本地仓库" class="headerlink" title="1.9.2. 提交到本地仓库"></a>1.9.2. 提交到本地仓库</h3><p>​    把该 删除操作 提交到 <strong>本地仓库</strong> 实现 版本记录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"删除了css文件夹"</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525855898836.png" alt="1525855898836"></p>
@@ -512,14 +511,14 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525855957999.png" alt="1525855957999"></p>
-<h2><span id="110-忽略文件">1.10. 忽略文件</span></h2><p>​    有时候，在工作目录下的某些文件，是属于私人的或者是项目运行所产生的临时文件，并不需要添加到 版本控制中。 如 新增一个文件 <code>私人密码</code></p>
+<h2 id="1-10-忽略文件"><a href="#1-10-忽略文件" class="headerlink" title="1.10. 忽略文件"></a>1.10. 忽略文件</h2><p>​    有时候，在工作目录下的某些文件，是属于私人的或者是项目运行所产生的临时文件，并不需要添加到 版本控制中。 如 新增一个文件 <code>私人密码</code></p>
 <p><img src="medias/1525858765405.png" alt="1525858765405"></p>
 <p>​    查看git仓库状态</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525859125972.png" alt="1525859125972"></p>
 <p>​    此时 我们可以使用 git 规定的一个文件   <code>.gitignore</code>   在里面指定需要过滤的文件</p>
-<h3><span id="1101-创建-忽略文件清单">1.10.1. 创建 忽略文件清单</span></h3><p>​    直接在windows 右键 新建文件  <code>gitignore</code>  会创建失败。</p>
+<h3 id="1-10-1-创建-忽略文件清单"><a href="#1-10-1-创建-忽略文件清单" class="headerlink" title="1.10.1. 创建 忽略文件清单"></a>1.10.1. 创建 忽略文件清单</h3><p>​    直接在windows 右键 新建文件  <code>gitignore</code>  会创建失败。</p>
 <p>​    使用命令行的方式创建  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .gitignore</span><br></pre></td></tr></table></figure>
 
@@ -537,7 +536,7 @@
 <p>​    提交到本地仓库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"添加了忽略文件列表"</span></span><br></pre></td></tr></table></figure>
 
-<h3><span id="1102-忽略文件语法">1.10.2. 忽略文件语法</span></h3><ul>
+<h3 id="1-10-2-忽略文件语法"><a href="#1-10-2-忽略文件语法" class="headerlink" title="1.10.2. 忽略文件语法"></a>1.10.2. 忽略文件语法</h3><ul>
 <li><p>语法大部分和正则类似</p>
 </li>
 <li><p>空行或是以#开头的行即注释行将被忽略；</p>
@@ -561,7 +560,7 @@
 <p>​</p>
 </li>
 </ul>
-<h2><span id="111-推送到远程仓库">1.11. 推送到远程仓库</span></h2><p>因为在团队开发中，我们的项目文件是需要和组员进行分享的，所以实现这个功能，就必须得借助远程仓库。</p>
+<h2 id="1-11-推送到远程仓库"><a href="#1-11-推送到远程仓库" class="headerlink" title="1.11. 推送到远程仓库"></a>1.11. 推送到远程仓库</h2><p>因为在团队开发中，我们的项目文件是需要和组员进行分享的，所以实现这个功能，就必须得借助远程仓库。</p>
 <p>远程仓库只是 本地仓库的一个备份。</p>
 <p>目前 用得比较多的有 <a href="https://github.com/" target="_blank" rel="noopener">github</a> 和 <a href="https://gitee.com/" target="_blank" rel="noopener">码云</a></p>
 <ul>
@@ -569,15 +568,15 @@
 <li>码云是github的国产版,对国人做了针对性的优化,在国内也是使用者众多</li>
 </ul>
 <p>我们主要演示 <strong>github</strong>的使用，码云 <strong>强烈建议</strong> 课下 自己学习使用。</p>
-<h3><span id="1111-注册-github">1.11.1. 注册 github</span></h3><p>先注册一个 github帐号</p>
+<h3 id="1-11-1-注册-github"><a href="#1-11-1-注册-github" class="headerlink" title="1.11.1. 注册 github"></a>1.11.1. 注册 github</h3><p>先注册一个 github帐号</p>
 <p><img src="medias/1525915907144.png" alt="1525915907144"></p>
-<h3><span id="1112-新建远程仓库">1.11.2. 新建远程仓库</span></h3><p><strong>1 一个github帐号可以建立多个远程仓库，一般 一个项目使用一个仓库。</strong></p>
+<h3 id="1-11-2-新建远程仓库"><a href="#1-11-2-新建远程仓库" class="headerlink" title="1.11.2. 新建远程仓库"></a>1.11.2. 新建远程仓库</h3><p><strong>1 一个github帐号可以建立多个远程仓库，一般 一个项目使用一个仓库。</strong></p>
 <p><img src="medias/1525916009292.png" alt="1525916009292"></p>
 <p><strong>2 填写仓库信息</strong></p>
 <p><img src="medias/1525916256235.png" alt="1525916256235"></p>
 <p><strong>3 创建成功</strong></p>
 <p><img src="medias/1525916479663.png" alt="1525916479663"></p>
-<h3><span id="1113-推送到远程仓库">1.11.3. 推送到远程仓库</span></h3><p>​    远程仓库建立完毕之后，我们可以 将 之前的 本地仓库 <code>我的第一个网站</code> 推送到上面新建的 <code>test</code> 远程仓库上</p>
+<h3 id="1-11-3-推送到远程仓库"><a href="#1-11-3-推送到远程仓库" class="headerlink" title="1.11.3. 推送到远程仓库"></a>1.11.3. 推送到远程仓库</h3><p>​    远程仓库建立完毕之后，我们可以 将 之前的 本地仓库 <code>我的第一个网站</code> 推送到上面新建的 <code>test</code> 远程仓库上</p>
 <p>​    先记录远程仓库的地址</p>
 <p><img src="medias/1525916715340.png" alt="1525916715340"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/itcastWsy/test.git</span><br></pre></td></tr></table></figure>
@@ -601,7 +600,7 @@
 <p><img src="medias/1525917563467.png" alt="1525917563467"></p>
 <p>同时，刷新一下 <strong>github</strong> 页面  看到远程仓库上 显示出 仓库的信息了。</p>
 <p><img src="medias/1525917685788.png" alt="1525917685788"></p>
-<h2><span id="112-从远程仓库克隆">1.12. 从远程仓库克隆</span></h2><p>​    假设 <strong>建立本地仓库</strong>、 <strong>推送到远程仓库</strong> 的工作都是项目经理完成了。此时，你做为一个新加入项目的 <strong>程序猿</strong>，要做的事就是从远程仓库上 <strong>克隆</strong> 代码。</p>
+<h2 id="1-12-从远程仓库克隆"><a href="#1-12-从远程仓库克隆" class="headerlink" title="1.12. 从远程仓库克隆"></a>1.12. 从远程仓库克隆</h2><p>​    假设 <strong>建立本地仓库</strong>、 <strong>推送到远程仓库</strong> 的工作都是项目经理完成了。此时，你做为一个新加入项目的 <strong>程序猿</strong>，要做的事就是从远程仓库上 <strong>克隆</strong> 代码。</p>
 <p>​    问项目经理拿 远程仓库的地址</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/itcastWsy/test.git</span><br></pre></td></tr></table></figure>
 
@@ -610,7 +609,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/itcastWsy/test.git</span><br></pre></td></tr></table></figure>
 
 <p> <img src="medias/1525918417230.png" alt="1525918417230"></p>
-<h2><span id="113-从远程仓库获取更新">1.13. 从远程仓库获取更新</span></h2><p>​    此时，项目经理的代码  和 你的代码 是一模一样的。现在 项目经理 新增了一个文件   <code>home.html</code>,并把它提交到远程仓库上。</p>
+<h2 id="1-13-从远程仓库获取更新"><a href="#1-13-从远程仓库获取更新" class="headerlink" title="1.13. 从远程仓库获取更新"></a>1.13. 从远程仓库获取更新</h2><p>​    此时，项目经理的代码  和 你的代码 是一模一样的。现在 项目经理 新增了一个文件   <code>home.html</code>,并把它提交到远程仓库上。</p>
 <ul>
 <li><p>新建 home.html 文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch home.html</span><br></pre></td></tr></table></figure>
@@ -636,11 +635,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525919829352.png" alt="1525919829352"></p>
-<h2><span id="114-git-clone-和-git-pull-的区别">1.14. git clone 和 git pull 的区别</span></h2><ul>
+<h2 id="1-14-git-clone-和-git-pull-的区别"><a href="#1-14-git-clone-和-git-pull-的区别" class="headerlink" title="1.14. git clone 和 git pull 的区别"></a>1.14. git clone 和 git pull 的区别</h2><ul>
 <li>git clone 是克隆，只需要执行一次</li>
 <li>git pull 是 更新，后期反复使用</li>
 </ul>
-<h2><span id="115-还原文件到上次commit状态">1.15. 还原文件到上次commit状态</span></h2><p>​    假设做为程序员的你，刚刚把代码更新下来，便上厕所去了，这个时候你的熊孩子趁你不在，对着你的键盘就是一顿 啪啪啪 ，把你 <strong>home.html</strong>  文件敲得面目全非。</p>
+<h2 id="1-15-还原文件到上次commit状态"><a href="#1-15-还原文件到上次commit状态" class="headerlink" title="1.15. 还原文件到上次commit状态"></a>1.15. 还原文件到上次commit状态</h2><p>​    假设做为程序员的你，刚刚把代码更新下来，便上厕所去了，这个时候你的熊孩子趁你不在，对着你的键盘就是一顿 啪啪啪 ，把你 <strong>home.html</strong>  文件敲得面目全非。</p>
 <p>​    你现在想要做的事，就是把 <strong>home.html</strong> 还原到 拉取下来的状态。</p>
 <p>​    原来的home.html 内容是空的。（你是不知道里面的内容的）</p>
 <p>​    熊孩子 把 <strong>home.html</strong> 改成了</p>
@@ -661,12 +660,12 @@
 <p>​</p>
 </li>
 </ul>
-<h2><span id="116-查看版本历史">1.16. 查看版本历史</span></h2><p>​    做为 新加入项目的你，想要了解 这个项目，到底做过了哪些版本，想要看到之前每一次提交时的备注信息 </p>
+<h2 id="1-16-查看版本历史"><a href="#1-16-查看版本历史" class="headerlink" title="1.16. 查看版本历史"></a>1.16. 查看版本历史</h2><p>​    做为 新加入项目的你，想要了解 这个项目，到底做过了哪些版本，想要看到之前每一次提交时的备注信息 </p>
 <p>此时，你的 <code>test</code> 文件夹内  输入 命令进行查看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525920485139.png" alt="1525920485139"></p>
-<h2><span id="117-还原到某一个版本">1.17. 还原到某一个版本</span></h2><p>​    做为 新加入项目的你，来获取了最新的代码之后，发现项目太大了，你不好去学习和了解 其中的某一个模块的功能和代码。如</p>
+<h2 id="1-17-还原到某一个版本"><a href="#1-17-还原到某一个版本" class="headerlink" title="1.17. 还原到某一个版本"></a>1.17. 还原到某一个版本</h2><p>​    做为 新加入项目的你，来获取了最新的代码之后，发现项目太大了，你不好去学习和了解 其中的某一个模块的功能和代码。如</p>
 <p><img src="medias/1525922607367.png" alt="1525922607367"></p>
 <p>此时，可以把整个项目 还原到 <strong>完成了登录功能的状态</strong></p>
 <p>​    记录 该版本的   <code>commit</code> 字段</p>
@@ -690,17 +689,17 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 5038cc9</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525923659935.png" alt="1525923659935"></p>
-<h3><span id="1171-小结">1.17.1. 小结</span></h3><ul>
+<h3 id="1-17-1-小结"><a href="#1-17-1-小结" class="headerlink" title="1.17.1. 小结"></a>1.17.1. 小结</h3><ul>
 <li><code>git checkout xxx</code> 只能还原文件到上一个版本</li>
 <li><code>git reset --hard &#39;commit的id&#39;</code> 可以还原到任意版本</li>
 <li><code>git reflog</code> 可以查看丢失了的版本的日志信息</li>
 </ul>
-<h2><span id="118-配置ssh">1.18. 配置ssh</span></h2><p>​    我们把文件从本地仓库推送到远程仓库的方式有两种</p>
+<h2 id="1-18-配置ssh"><a href="#1-18-配置ssh" class="headerlink" title="1.18. 配置ssh"></a>1.18. 配置ssh</h2><p>​    我们把文件从本地仓库推送到远程仓库的方式有两种</p>
 <ul>
 <li>HTTPS 每次都要手动输入 用户名和密码 </li>
 <li>SSH 配置证书后，不用手动输入用户名和密码</li>
 </ul>
-<h3><span id="1181-配置证书">1.18.1. 配置证书</span></h3><p>在git bash 命令行中输入  </p>
+<h3 id="1-18-1-配置证书"><a href="#1-18-1-配置证书" class="headerlink" title="1.18.1. 配置证书"></a>1.18.1. 配置证书</h3><p>在git bash 命令行中输入  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></span><br></pre></td></tr></table></figure>
 
 <p>然后一直按回车。直到出现如下界面 代表本地 证书生成成功</p>
@@ -716,7 +715,7 @@
 
 <p>出现以下界面代表成功。如果失败，建议多尝试几次。</p>
 <p><img src="medias/1525934471737.png" alt="1525934471737"></p>
-<h3><span id="1182-将提交方式-https-改为-ssh">1.18.2. 将提交方式 HTTPS   改为 SSH</span></h3><p>复制 <strong>SSH</strong> 地址</p>
+<h3 id="1-18-2-将提交方式-HTTPS-改为-SSH"><a href="#1-18-2-将提交方式-HTTPS-改为-SSH" class="headerlink" title="1.18.2. 将提交方式 HTTPS   改为 SSH"></a>1.18.2. 将提交方式 HTTPS   改为 SSH</h3><p>复制 <strong>SSH</strong> 地址</p>
 <p><img src="medias/1525934827313.png" alt="1525934827313"></p>
 <p><img src="medias/1525934868632.png" alt="1525934868632"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:itcastWsy/test.git</span><br></pre></td></tr></table></figure>
@@ -734,7 +733,7 @@
 <p>按照以上步骤执行完毕之后，再次推送到远程仓库时，就不用再输入用户名和密码了。</p>
 <p>测试 </p>
 <p><img src="medias/1525935332160.png" alt="1525935332160"></p>
-<h2><span id="119-分支">1.19. 分支</span></h2><p>​    其实我们在使用git的时候，一直在 git的主分支<code>master</code>也是默认分支下进行工作的。也可以手动开启另外的分支进行开发。</p>
+<h2 id="1-19-分支"><a href="#1-19-分支" class="headerlink" title="1.19. 分支"></a>1.19. 分支</h2><p>​    其实我们在使用git的时候，一直在 git的主分支<code>master</code>也是默认分支下进行工作的。也可以手动开启另外的分支进行开发。</p>
 <p>​    开启新的的分支时可以理解为复制了一个相同的副本.内容完全一样</p>
 <p>​    分支的作用是提供了一种方便、高效的管理项目的手段。</p>
 <p>​    学习分支,我们需要从需求入手</p>
@@ -753,27 +752,27 @@
 <p>经过以上流程,我们可以在毫无风险的情况下开发新功能,不会影响到已经发布了的网站。</p>
 </li>
 </ol>
-<h3><span id="1191-网站发布0版本">1.19.1. 网站发布0版本</span></h3><p>在目下下,新建文件夹 <code>web</code>，并在里新建一个空的文件<code>index.html</code> 提交到本地仓库</p>
+<h3 id="1-19-1-网站发布0版本"><a href="#1-19-1-网站发布0版本" class="headerlink" title="1.19.1. 网站发布0版本"></a>1.19.1. 网站发布0版本</h3><p>在目下下,新建文件夹 <code>web</code>，并在里新建一个空的文件<code>index.html</code> 提交到本地仓库</p>
 <p><img src="medias/1528519852700.png" alt="1528519852700"></p>
-<h3><span id="1192-开启新分支">1.19.2. 开启新分支</span></h3><p>​    在完成1.0版本发布后（commit之后），开启新分支 dev（dev为分支名）</p>
+<h3 id="1-19-2-开启新分支"><a href="#1-19-2-开启新分支" class="headerlink" title="1.19.2. 开启新分支"></a>1.19.2. 开启新分支</h3><p>​    在完成1.0版本发布后（commit之后），开启新分支 dev（dev为分支名）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
 
 <p>​    查看当前仓库下的分支</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1528520046133.png" alt="1528520046133"></p>
-<h3><span id="1193-切换分支">1.19.3. 切换分支</span></h3><p>​    此时，需要手动切换分支到dev上，</p>
+<h3 id="1-19-3-切换分支"><a href="#1-19-3-切换分支" class="headerlink" title="1.19.3. 切换分支"></a>1.19.3. 切换分支</h3><p>​    此时，需要手动切换分支到dev上，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1528520161732.png" alt="1528520161732"></p>
-<h3><span id="1194-在分支dev上开发功能">1.19.4. 在分支dev上开发功能</span></h3><p>​    此时，我们可以在分支dev上，放心的进行功能开发。编辑文件 <code>index.html</code> 添加一下内容 </p>
+<h3 id="1-19-4-在分支dev上开发功能"><a href="#1-19-4-在分支dev上开发功能" class="headerlink" title="1.19.4. 在分支dev上开发功能"></a>1.19.4. 在分支dev上开发功能</h3><p>​    此时，我们可以在分支dev上，放心的进行功能开发。编辑文件 <code>index.html</code> 添加一下内容 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">开发新功能1.0</span><br></pre></td></tr></table></figure>
 
 <p>​    提交到仓库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"dev下开发新功能1.1"</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1528520834607.png" alt="1528520834607"></p>
-<h3><span id="1195-合并分支">1.19.5. 合并分支</span></h3><p>​    新功能开发完毕，需要将分支<code>dev</code>的代码合并到主分支<code>master</code>上</p>
+<h3 id="1-19-5-合并分支"><a href="#1-19-5-合并分支" class="headerlink" title="1.19.5. 合并分支"></a>1.19.5. 合并分支</h3><p>​    新功能开发完毕，需要将分支<code>dev</code>的代码合并到主分支<code>master</code>上</p>
 <ol>
 <li><p>切换回主分支 <code>master</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
@@ -784,14 +783,14 @@
 <p><img src="medias/1528521188063.png" alt="1528521188063"></p>
 </li>
 </ol>
-<h3><span id="1196-删除分支">1.19.6. 删除分支</span></h3><p>既然 分支dev的功能已经完成，我们可以将其删除。</p>
+<h3 id="1-19-6-删除分支"><a href="#1-19-6-删除分支" class="headerlink" title="1.19.6. 删除分支"></a>1.19.6. 删除分支</h3><p>既然 分支dev的功能已经完成，我们可以将其删除。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d dev</span><br></pre></td></tr></table></figure>
 
 <p><img src="medias/1525947107745.png" alt="1525947107745"></p>
 <p>查看git仓库下的分支，发现 分支dev 确实没有了</p>
 <p><img src="medias/1525947206980.png" alt="1525947206980"></p>
-<h2><span id="120-冲突">1.20. 冲突</span></h2><p>​    冲突是指当两个同名的文件进行合并时，会产生的一种场景。</p>
-<h3><span id="1201-冲突描述">1.20.1. 冲突描述</span></h3><p><img src="medias/1526001349246.png" alt="1526001349246"></p>
+<h2 id="1-20-冲突"><a href="#1-20-冲突" class="headerlink" title="1.20. 冲突"></a>1.20. 冲突</h2><p>​    冲突是指当两个同名的文件进行合并时，会产生的一种场景。</p>
+<h3 id="1-20-1-冲突描述"><a href="#1-20-1-冲突描述" class="headerlink" title="1.20.1. 冲突描述"></a>1.20.1. 冲突描述</h3><p><img src="medias/1526001349246.png" alt="1526001349246"></p>
 <p>​    当把       <code>我的代码</code>内的两个文件 拷贝到 <code>他的代码</code> 文件夹内时 </p>
 <p><img src="medias/1526001545996.png" alt="1526001545996"></p>
 <p>​    可以看到此时，冲突就产生了 因为电脑并不知道 你想要保留哪一份   <code>index.html</code> 文件（<strong>home.html</strong>没有冲突） ，于是，弹出对话框，让用户进行选择。</p>
@@ -800,8 +799,8 @@
 <li>在文件进行合并时容易产生</li>
 <li>冲突的解决方法，只能是用户决定</li>
 </ul>
-<h2><span id="121-分支合并时的冲突">1.21. 分支合并时的冲突</span></h2><p>​    刚才的演示，是人为手动操作导致的。当我们使用分支，进行合并的时候，也会出现冲突，只不过这次冲突的 <strong>提示框</strong> 和 <strong>解决方法</strong> 都是通过 <strong>命令行</strong>来体现的。</p>
-<h3><span id="1211-初始化仓库">1.21.1. 初始化仓库</span></h3><ol>
+<h2 id="1-21-分支合并时的冲突"><a href="#1-21-分支合并时的冲突" class="headerlink" title="1.21. 分支合并时的冲突"></a>1.21. 分支合并时的冲突</h2><p>​    刚才的演示，是人为手动操作导致的。当我们使用分支，进行合并的时候，也会出现冲突，只不过这次冲突的 <strong>提示框</strong> 和 <strong>解决方法</strong> 都是通过 <strong>命令行</strong>来体现的。</p>
+<h3 id="1-21-1-初始化仓库"><a href="#1-21-1-初始化仓库" class="headerlink" title="1.21.1. 初始化仓库"></a>1.21.1. 初始化仓库</h3><ol>
 <li>新建一个文件夹 <code>冲突的演示</code></li>
 <li>初始化 git 仓库 <code>git init</code></li>
 <li>新建文件 <code>index.html</code></li>
@@ -810,7 +809,7 @@
 </ol>
 <p><img src="medias/1526002222651.png" alt="1526002222651"></p>
 <p>​    </p>
-<h3><span id="1212-开启-分支-dev">1.21.2. 开启 分支 dev</span></h3><p>​    初始化完仓库之后，开启分支dev，此时 分支dev 的内容和主分支master 是一模一样的</p>
+<h3 id="1-21-2-开启-分支-dev"><a href="#1-21-2-开启-分支-dev" class="headerlink" title="1.21.2. 开启 分支 dev"></a>1.21.2. 开启 分支 dev</h3><p>​    初始化完仓库之后，开启分支dev，此时 分支dev 的内容和主分支master 是一模一样的</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
 
 <p>​    <img src="medias/1526002370112.png" alt="1526002370112"></p>
@@ -837,7 +836,7 @@
 <p><img src="medias/1526003463186.png" alt="1526003463186"></p>
 <p>完成了以上操作之后，主分支<strong>master</strong>和 分支<strong>dev</strong> 下的index.html 分别是</p>
 <p><img src="medias/1526003571578.png" alt="1526003571578"></p>
-<h3><span id="1213-合并冲突分支以及解决">1.21.3. 合并冲突分支以及解决</span></h3><p>此时准备分支合并，</p>
+<h3 id="1-21-3-合并冲突分支以及解决"><a href="#1-21-3-合并冲突分支以及解决" class="headerlink" title="1.21.3. 合并冲突分支以及解决"></a>1.21.3. 合并冲突分支以及解决</h3><p>此时准备分支合并，</p>
 <ol>
 <li><p>切换回主分支 <code>git checkout master</code></p>
 </li>
@@ -854,7 +853,7 @@
 </li>
 </ol>
 <p>至此，冲突的产生以及解决，演示完毕。 强烈建议  自行多练习该步骤，了解每一步的含义。</p>
-<h2><span id="122-常用git命令">1.22. 常用git命令</span></h2><table>
+<h2 id="1-22-常用git命令"><a href="#1-22-常用git命令" class="headerlink" title="1.22. 常用git命令"></a>1.22. 常用git命令</h2><table>
 <thead>
 <tr>
 <th>注解</th>
@@ -978,7 +977,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2><span id="123-扩展阅读">1.23. 扩展阅读</span></h2><p><a href="https://progit.bootcss.com/" target="_blank" rel="noopener">Pro Git</a></p>
+<h2 id="1-23-扩展阅读"><a href="#1-23-扩展阅读" class="headerlink" title="1.23. 扩展阅读"></a>1.23. 扩展阅读</h2><p><a href="https://progit.bootcss.com/" target="_blank" rel="noopener">Pro Git</a></p>
 <p><a href="https://backlog.com/git-tutorial/cn" target="_blank" rel="noopener">猴子都能看懂的git</a></p>
 <p><a href="https://www.cnblogs.com/savorboard/p/bash-guide.html" target="_blank" rel="noopener">十分钟掌握bash 命令</a></p>
 
@@ -1017,8 +1016,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/12/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/08/10/mysql/" rel="next" title="mysql基础命令">
+                  <i class="fa fa-chevron-left"></i> mysql基础命令
                 </a>
               
             </div>
@@ -1027,8 +1026,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/12/ant-design/" rel="prev" title="react+ant-design入坑">
-                  react+ant-design入坑 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/08/12/hello-world/" rel="prev" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -1175,7 +1174,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1.1. 学习目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">1.2. 认识命令行 了解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">1.2.1. shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">1.2.2. 常见bash命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">1.2.3. vi编辑器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">1.3. git概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">1.4. git和svn对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">4.1.</span> <span class="nav-text">1.4.1. svn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">4.2.</span> <span class="nav-text">1.4.2. git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">1.5. git 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">1.6. 初次运行 Git 前的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">6.1.</span> <span class="nav-text">1.6.1. 全局配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">1.7. git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">7.1.</span> <span class="nav-text">1.7.1. 创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">7.2.</span> <span class="nav-text">1.7.2. 添加到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">7.3.</span> <span class="nav-text">1.7.3. 提交本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">7.4.</span> <span class="nav-text">1.7.4. 小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">8.</span> <span class="nav-text">1.8. 修改文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">8.1.</span> <span class="nav-text">1.8.1. 添加到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">8.2.</span> <span class="nav-text">1.8.2. 提交到本地仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">9.</span> <span class="nav-text">1.9. 删除文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">9.1.</span> <span class="nav-text">1.9.1. 添加到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">9.2.</span> <span class="nav-text">1.9.2. 提交到本地仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">10.</span> <span class="nav-text">1.10. 忽略文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">10.1.</span> <span class="nav-text">1.10.1. 创建 忽略文件清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">10.2.</span> <span class="nav-text">1.10.2. 忽略文件语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">11.</span> <span class="nav-text">1.11. 推送到远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">11.1.</span> <span class="nav-text">1.11.1. 注册 github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">11.2.</span> <span class="nav-text">1.11.2. 新建远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">11.3.</span> <span class="nav-text">1.11.3. 推送到远程仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">12.</span> <span class="nav-text">1.12. 从远程仓库克隆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">13.</span> <span class="nav-text">1.13. 从远程仓库获取更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">14.</span> <span class="nav-text">1.14. git clone 和 git pull 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">15.</span> <span class="nav-text">1.15. 还原文件到上次commit状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">16.</span> <span class="nav-text">1.16. 查看版本历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">17.</span> <span class="nav-text">1.17. 还原到某一个版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">17.1.</span> <span class="nav-text">1.17.1. 小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">18.</span> <span class="nav-text">1.18. 配置ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">18.1.</span> <span class="nav-text">1.18.1. 配置证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">18.2.</span> <span class="nav-text">1.18.2. 将提交方式 HTTPS   改为 SSH</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">19.</span> <span class="nav-text">1.19. 分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">19.1.</span> <span class="nav-text">1.19.1. 网站发布0版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">19.2.</span> <span class="nav-text">1.19.2. 开启新分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">19.3.</span> <span class="nav-text">1.19.3. 切换分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">19.4.</span> <span class="nav-text">1.19.4. 在分支dev上开发功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">19.5.</span> <span class="nav-text">1.19.5. 合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">19.6.</span> <span class="nav-text">1.19.6. 删除分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">20.</span> <span class="nav-text">1.20. 冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">20.1.</span> <span class="nav-text">1.20.1. 冲突描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">21.</span> <span class="nav-text">1.21. 分支合并时的冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">21.1.</span> <span class="nav-text">1.21.1. 初始化仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">21.2.</span> <span class="nav-text">1.21.2. 开启 分支 dev</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">21.3.</span> <span class="nav-text">1.21.3. 合并冲突分支以及解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">22.</span> <span class="nav-text">1.22. 常用git命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">23.</span> <span class="nav-text">1.23. 扩展阅读</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-学习目标"><span class="nav-number">1.</span> <span class="nav-text">1.1. 学习目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-认识命令行-了解"><span class="nav-number">2.</span> <span class="nav-text">1.2. 认识命令行 了解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1-shell"><span class="nav-number">2.1.</span> <span class="nav-text">1.2.1. shell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2-常见bash命令"><span class="nav-number">2.2.</span> <span class="nav-text">1.2.2. 常见bash命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3-vi编辑器"><span class="nav-number">2.3.</span> <span class="nav-text">1.2.3. vi编辑器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-git概述"><span class="nav-number">3.</span> <span class="nav-text">1.3. git概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-git和svn对比"><span class="nav-number">4.</span> <span class="nav-text">1.4. git和svn对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-svn"><span class="nav-number">4.1.</span> <span class="nav-text">1.4.1. svn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-git"><span class="nav-number">4.2.</span> <span class="nav-text">1.4.2. git</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-git-安装"><span class="nav-number">5.</span> <span class="nav-text">1.5. git 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-初次运行-Git-前的配置"><span class="nav-number">6.</span> <span class="nav-text">1.6. 初次运行 Git 前的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-1-全局配置"><span class="nav-number">6.1.</span> <span class="nav-text">1.6.1. 全局配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-git-基础"><span class="nav-number">7.</span> <span class="nav-text">1.7. git 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-1-创建版本库"><span class="nav-number">7.1.</span> <span class="nav-text">1.7.1. 创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-2-添加到暂存区"><span class="nav-number">7.2.</span> <span class="nav-text">1.7.2. 添加到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-3-提交本地仓库"><span class="nav-number">7.3.</span> <span class="nav-text">1.7.3. 提交本地仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-4-小结"><span class="nav-number">7.4.</span> <span class="nav-text">1.7.4. 小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-修改文件"><span class="nav-number">8.</span> <span class="nav-text">1.8. 修改文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-1-添加到暂存区"><span class="nav-number">8.1.</span> <span class="nav-text">1.8.1. 添加到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-2-提交到本地仓库"><span class="nav-number">8.2.</span> <span class="nav-text">1.8.2. 提交到本地仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-删除文件"><span class="nav-number">9.</span> <span class="nav-text">1.9. 删除文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9-1-添加到暂存区"><span class="nav-number">9.1.</span> <span class="nav-text">1.9.1. 添加到暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9-2-提交到本地仓库"><span class="nav-number">9.2.</span> <span class="nav-text">1.9.2. 提交到本地仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-忽略文件"><span class="nav-number">10.</span> <span class="nav-text">1.10. 忽略文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-10-1-创建-忽略文件清单"><span class="nav-number">10.1.</span> <span class="nav-text">1.10.1. 创建 忽略文件清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-10-2-忽略文件语法"><span class="nav-number">10.2.</span> <span class="nav-text">1.10.2. 忽略文件语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-11-推送到远程仓库"><span class="nav-number">11.</span> <span class="nav-text">1.11. 推送到远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-11-1-注册-github"><span class="nav-number">11.1.</span> <span class="nav-text">1.11.1. 注册 github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-11-2-新建远程仓库"><span class="nav-number">11.2.</span> <span class="nav-text">1.11.2. 新建远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-11-3-推送到远程仓库"><span class="nav-number">11.3.</span> <span class="nav-text">1.11.3. 推送到远程仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-12-从远程仓库克隆"><span class="nav-number">12.</span> <span class="nav-text">1.12. 从远程仓库克隆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-13-从远程仓库获取更新"><span class="nav-number">13.</span> <span class="nav-text">1.13. 从远程仓库获取更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-14-git-clone-和-git-pull-的区别"><span class="nav-number">14.</span> <span class="nav-text">1.14. git clone 和 git pull 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-15-还原文件到上次commit状态"><span class="nav-number">15.</span> <span class="nav-text">1.15. 还原文件到上次commit状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-16-查看版本历史"><span class="nav-number">16.</span> <span class="nav-text">1.16. 查看版本历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-17-还原到某一个版本"><span class="nav-number">17.</span> <span class="nav-text">1.17. 还原到某一个版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-17-1-小结"><span class="nav-number">17.1.</span> <span class="nav-text">1.17.1. 小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-18-配置ssh"><span class="nav-number">18.</span> <span class="nav-text">1.18. 配置ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-18-1-配置证书"><span class="nav-number">18.1.</span> <span class="nav-text">1.18.1. 配置证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-18-2-将提交方式-HTTPS-改为-SSH"><span class="nav-number">18.2.</span> <span class="nav-text">1.18.2. 将提交方式 HTTPS   改为 SSH</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-19-分支"><span class="nav-number">19.</span> <span class="nav-text">1.19. 分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-19-1-网站发布0版本"><span class="nav-number">19.1.</span> <span class="nav-text">1.19.1. 网站发布0版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-19-2-开启新分支"><span class="nav-number">19.2.</span> <span class="nav-text">1.19.2. 开启新分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-19-3-切换分支"><span class="nav-number">19.3.</span> <span class="nav-text">1.19.3. 切换分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-19-4-在分支dev上开发功能"><span class="nav-number">19.4.</span> <span class="nav-text">1.19.4. 在分支dev上开发功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-19-5-合并分支"><span class="nav-number">19.5.</span> <span class="nav-text">1.19.5. 合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-19-6-删除分支"><span class="nav-number">19.6.</span> <span class="nav-text">1.19.6. 删除分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-20-冲突"><span class="nav-number">20.</span> <span class="nav-text">1.20. 冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-20-1-冲突描述"><span class="nav-number">20.1.</span> <span class="nav-text">1.20.1. 冲突描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-21-分支合并时的冲突"><span class="nav-number">21.</span> <span class="nav-text">1.21. 分支合并时的冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-21-1-初始化仓库"><span class="nav-number">21.1.</span> <span class="nav-text">1.21.1. 初始化仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-21-2-开启-分支-dev"><span class="nav-number">21.2.</span> <span class="nav-text">1.21.2. 开启 分支 dev</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-21-3-合并冲突分支以及解决"><span class="nav-number">21.3.</span> <span class="nav-text">1.21.3. 合并冲突分支以及解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-22-常用git命令"><span class="nav-number">22.</span> <span class="nav-text">1.22. 常用git命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-23-扩展阅读"><span class="nav-number">23.</span> <span class="nav-text">1.23. 扩展阅读</span></a></li></ol></div>
             
 
           </div>
