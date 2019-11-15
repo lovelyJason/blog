@@ -60,3 +60,15 @@ https://zhuanlan.zhihu.com/p/67937366
 > Warning: `defaultValue` is invalid for `getFieldDecorator` will set `value`, please use `option.initialValue` instead.
 
 原因: 经过getFieldDecorator包装的表单组件value已经被托管,不能设置此属性
+
+------
+
+
+
+> Each child in an array or iterator should have a unique "key" prop. Check the render method of `DropdownMenu`
+
+出现此原因不一定是map循环遍历时少了key属性,更坑爹的是value属性有误也是报这个错误
+
+> **Warning: React.createElement: type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined.You likely forgot to export your component form the file it's defined in**
+
+可能import 导入有问题 
