@@ -463,8 +463,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/12/hello-world/" rel="prev" title="Hello World">
-                  Hello World <i class="fa fa-chevron-right"></i>
+                <a href="/2019/08/12/git/" rel="prev" title="git常用命令">
+                  git常用命令 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -728,5 +728,25 @@
     // $("#sidebar").remove();
     // $(".sidebar-toggle").remove();
   }
+  var imgSrcArr = [
+        '/images/gotop.gif'
+    ];
+
+    var imgWrap = [];
+
+    function preloadImg(arr) {
+        for(var i =0; i< arr.length ;i++) {
+            imgWrap[i] = new Image();
+            imgWrap[i].src = arr[i];
+        }
+    }
+
+    preloadImg(imgSrcArr);
+
+    //或者延迟的文档加载完毕在加载图片
+
+    $(function () {
+        preloadImg(imgSrcArr);
+    })
 </script>
 </html>

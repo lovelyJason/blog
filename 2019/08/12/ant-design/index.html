@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="弱笔流年">
 <meta property="og:description" content="写在前面首次用react+design开发公司的项目,记录一些开发的历程,大佬勿喷 1. 表单组件 经过getFieldDecorator包装的Input以及其他组件的defaultValue无效,需设置options.initialValue  报错信息 You cannot set a form field before rendering a field associated with th">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-22T03:12:32.125Z">
+<meta property="og:updated_time" content="2019-08-26T12:11:13.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react+ant-design入坑">
 <meta name="twitter:description" content="写在前面首次用react+design开发公司的项目,记录一些开发的历程,大佬勿喷 1. 表单组件 经过getFieldDecorator包装的Input以及其他组件的defaultValue无效,需设置options.initialValue  报错信息 You cannot set a form field before rendering a field associated with th">
@@ -273,7 +273,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-22 11:12:32" itemprop="dateModified" datetime="2019-08-22T11:12:32+08:00">2019-08-22</time>
+                <time title="修改时间：2019-08-26 20:11:13" itemprop="dateModified" datetime="2019-08-26T20:11:13+08:00">2019-08-26</time>
               </span>
             
           
@@ -331,6 +331,10 @@
 <p>Each child in an array or iterator should have a unique “key” prop. Check the render method of <code>DropdownMenu</code></p>
 </blockquote>
 <p>出现此原因不一定是map循环遍历时少了key属性,更坑爹的是value属性有误也是报这个错误</p>
+<blockquote>
+<p><strong>Warning: React.createElement: type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined.You likely forgot to export your component form the file it’s defined in</strong></p>
+</blockquote>
+<p>可能import 导入有问题 </p>
 
     </div>
 
@@ -367,8 +371,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/12/git/" rel="next" title="git常用命令">
-                  <i class="fa fa-chevron-left"></i> git常用命令
+                <a href="/2019/08/12/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
                 </a>
               
             </div>
@@ -642,5 +646,25 @@
     // $("#sidebar").remove();
     // $(".sidebar-toggle").remove();
   }
+  var imgSrcArr = [
+        '/images/gotop.gif'
+    ];
+
+    var imgWrap = [];
+
+    function preloadImg(arr) {
+        for(var i =0; i< arr.length ;i++) {
+            imgWrap[i] = new Image();
+            imgWrap[i].src = arr[i];
+        }
+    }
+
+    preloadImg(imgSrcArr);
+
+    //或者延迟的文档加载完毕在加载图片
+
+    $(function () {
+        preloadImg(imgSrcArr);
+    })
 </script>
 </html>
